@@ -5,7 +5,7 @@ const InfoBox = () => {
 		<div>
 			<div className="container-titleBoxes">
 				<h2>TODO LO QUE NECESITAS SABER</h2>
-				<p>¡ No dejes para mañana lo que puedes comprar hoy !</p>
+				<h3>¡ No dejes para mañana lo que puedes comprar hoy !</h3>
 				<div>
 					<Card />
 				</div>

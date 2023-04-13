@@ -18,17 +18,68 @@ body {
     flex-direction: column;
 }
 
-.container-titleBoxes {
-    background: linear-gradient(to right, #012959, #0249a1, #1e76a5, #0249a1, #012959);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 .container-slogan {
   background: linear-gradient(to right, #012959, #0249a1, #1e76a5, #0249a1, #012959);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.container-titleBoxes {
+    margin-left: auto;
+    margin-right: auto;
+    height: 3.5;
+    font-size: 3rem;
+    line-height: 1;
+    text-align: center;
+    padding: 0 0 2rem 0;
+}
+
+.container-titleBoxes h2 {
+    font-weight: 700;
+    font-family: "Sansita";
+    margin-bottom: 2rem;
+    background: linear-gradient(to right, #012959, #0249a1, #1e76a5, #0249a1, #012959);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container-titleBoxes  h3{
+    font-size: 2.5rem;
+    font-family: "Shadows Into Light";
+    margin-bottom: 2rem;
+    background: linear-gradient(to right, #012959, #0249a1, #1e76a5, #0249a1, #012959);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container-boxes {
+    width: full;
+    display: flex;
+    padding-bottom: .25em;
+    text-align: center;
+}
+
+.container-box {
+    width: 33.3333333333%;
+    margin: 0.75em;
+    border-radius: 0.5rem;
+    box-shadow:2px 2px 5px 0px rgba(128, 128, 128, 0.7);
+    text-align: center;
+}
+
+.container-box img{
+    width: 50%;
+    margin: 0.25em auto 0.25em auto;
+}
+
+.container-box p{
+    margin: 0 2em 2em 2em;
+    color: rgb(107, 114, 128);
+    font-size: 1.5rem;
+    line-height: 1.75em;
+    font-family: "Dosis", "sans-serif";
+}
+
 
 /* -----------------------------------contenedores imagenes 2XL------------------------------------------ */
 @media only screen and (min-width: 1441px) {
@@ -194,27 +245,6 @@ body {
         padding-left: 1rem;
     }
 
-    .container-titleBoxes {
-        margin-left: auto;
-        margin-right: auto;
-        height: 3.5;
-        font-size: 3rem;
-        line-height: 1;
-        text-align: center;
-        padding: 0 0 2rem 0;
-    }
-
-    .container-titleBoxes h2 {
-        font-weight: 700;
-        font-family: "Sansita";
-        margin-bottom: 2rem;
-    }
-
-    .container-titleBoxes  p{
-        font-size: 2.5rem;
-        font-family: "Shadows Into Light";
-        margin-bottom: 2rem;
-    }
 
     .container-footer {
         display: flex;
@@ -425,7 +455,7 @@ body {
 		padding-left: 1rem;
 	}
 
-    .container-titleBoxes {
+    /* .container-titleBoxes {
         margin-left: auto;
         margin-right: auto;
         height: 3.5;
@@ -441,10 +471,14 @@ body {
         margin-bottom: 2rem;
     }
 
-    .container-titleBoxes  p{
+    .container-titleBoxes h3{
         font-size: 2.5rem;
         font-family: "Shadows Into Light";
         margin-bottom: 2rem;
+    } */
+
+    .container-box p{
+        font-size: 1.25rem;
     }
 
 	.container-footer {
@@ -655,27 +689,16 @@ body {
 		padding-left: 1rem;
 	}
 
-    .container-titleBoxes {
-        margin-left: auto;
-        margin-right: auto;
-        height: 3.5;
-        font-size: 3rem;
-        line-height: 1;
-        text-align: center;
-        padding: 0 0 2rem 0;
-    }
-
     .container-titleBoxes h2 {
-        font-weight: 700;
-        font-size: 2.5rem;
-        font-family: "Sansita";
-        margin-bottom: 1em;
+        font-size: 2.25rem;
     }
 
-    .container-titleBoxes  p{
-        font-size: 2rem;
-        font-family: "Shadows Into Light";
-        margin-bottom: 1em;
+    .container-titleBoxes h3{
+        font-size: 1.75rem;
+    }
+
+    .container-box p{
+        font-size: 1rem;
     }
 
 	.container-footer {
@@ -892,24 +915,15 @@ body {
 	}
 
     .container-titleBoxes {
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
-        font-size: 1.25rem;
-        line-height: 1.5em;
-        text-align: center;
+        font-size: 1.5rem;
     }
 
-    .container-titleBoxes h2 {
-        font-weight: 700;
-        font-family: "Sansita";
-        margin-bottom: 0.5em;
-    }
-
-    .container-titleBoxes  p{
+    .container-titleBoxes h3{
         font-size: 1rem;
-        font-family: "Shadows Into Light";
-        margin-bottom: 0.75em;
+    }
+
+    .container-box p{
+        font-size: 0.5rem;
     }
 
 	.container-footer {
@@ -1114,23 +1128,15 @@ body {
     }
 
     .container-titleBoxes {
-        margin-left: auto;
-        margin-right: auto;
         font-size: 1.25rem;
-        line-height: 1.5em;
-        text-align: center;
     }
 
-    .container-titleBoxes h2 {
-        font-weight: 700;
-        font-family: "Sansita";
-        margin-bottom: 0.5em;
+    .container-titleBoxes h3{
+        font-size: .9rem;
     }
 
-    .container-titleBoxes  p{
-        font-size: 1rem;
-        font-family: "Shadows Into Light";
-        margin-bottom: 0.75em;
+    .container-box p{
+        font-size: 0.5rem;
     }
 
     .container-footer {
