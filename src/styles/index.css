@@ -1,0 +1,1065 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.container-slogan {
+  background: linear-gradient(to right, #012959, #0249a1, #1e76a5, #0249a1, #012959);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* -----------------------------------contenedores imagenes 2XL------------------------------------------ */
+@media only screen and (min-width: 1441px) {
+    .container-body-mdOrUpper {
+        display: block;
+        display: flex;
+        width: 100%;
+    }
+
+    .container-body-mdOrLower  {
+        display: none;
+    }
+
+    .container-hamburguerMenu {
+        display: none;
+    }
+
+    .container-header {
+        position: fixed;
+        width: 100%;
+        height: 6rem;
+        box-shadow:5px 5px 5px 0px rgba(128, 128, 128, 0.7);
+        align-items: center;
+    }
+
+    .container-socialNetwork {
+        width: 100%;
+        display: flex;
+        gap: 1rem;
+        padding-right: 1rem;
+        color: rgb(255 255 255);
+        justify-content: flex-end;
+    }
+
+    .container-socialNetwork img {
+        height: 1.65rem;
+    }
+
+    .container-mainMenu {
+        align-items: center;
+        justify-content: center;
+        padding-right: 20rem;
+        display: flex;
+        gap: 8rem;
+        color: rgb(255 255 255);
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+
+    .container-main {
+        padding-top: 7rem;
+    }
+
+    .container-verticalImage {
+        margin: 10PX 10px 10px 0;
+        width: 30%;
+    }
+
+    .container-horizontal-Total {
+        width: 40%;
+    }
+
+    .container-horizontalImage {
+        margin: 10px 0 10px 0;
+        height: 400px;
+        width: 100%;
+    }
+
+    .container-phraseVertical1 {
+        margin: auto;
+        display: inline-block;
+        align-items: center;
+        border-top-right-radius: 624rem;
+        border-bottom-right-radius: 624rem;
+        font-size: 3rem/* 48px */;
+        line-height: 1;
+        margin-top: -760px;
+        width: 80%;
+        padding: 10px;
+        background-color: rgb(107, 114, 128, 0.5);
+        color:rgb(255 255 255);
+        text-align: center;
+    }
+
+    .container-phraseVertical2 {
+        margin: auto;
+        display: inline-block;
+        align-items: center;
+        border-top-left-radius: 624rem;
+        border-bottom-left-radius: 624rem;
+        font-size: 3rem/* 48px */;
+        line-height: 1;
+        margin-top: -125px;
+        width: 80%;
+        padding: 10px;
+        color:rgb(255 255 255);
+        background-color: rgb(107, 114, 128, 0.5);
+        text-align: center;
+    }
+
+    .container-phraseHorizontal {
+        margin: auto;
+        display: inline-block;
+        align-items: center;
+        border-radius: 624rem;
+        font-size: 3rem/* 48px */;
+        line-height: 1;
+        margin-top: -220px;
+        width: 80%;
+        padding: 10px;
+        color:rgb(255 255 255);
+        background-color: rgb(107, 114, 128, 0.5);
+        text-align: center;
+    }
+
+    .container-phraseLogo {
+        margin-left: 0.5rem;
+        padding-top: 0.5rem;
+        width: 70%;
+        align-items: center;
+        color: rgb(255 255 255);
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+    .container-slogan {
+        height: 3.5;
+        font-size: 3rem;
+        line-height: 1;
+				text-align: center;
+				padding: 0 0 2rem 0;
+    }
+
+    .logo-image {
+        height: 5rem;
+        width:30%;
+        margin-left: 0.5rem;
+    }
+
+    .horizontal-image {
+        width: 100%;
+        height: 360px;
+    }
+
+    .vertical-image {
+        width: 100%;
+        height: 770px;
+    }
+
+    .bg-gradient-buttom {
+        align-items: center;
+        color: rgb(255 255 255);
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .bg-gradient-buttom p {
+        padding-left: 1rem;
+    }
+
+		.container-footer {
+			display: flex;
+			bottom: 0;
+			width: 100%;
+			background-color: rgb(229 231 235);
+			text-align: center;
+			padding: 3.5rem 10rem;
+			justify-content: space-between;
+			box-shadow:5px -5px 5px 0px rgba(128, 128, 128, 0.7);
+		}
+
+		.container-footer h2{
+			font-weight: 700;
+		}
+		.container-footer p{
+			font-weight: 100;
+		}
+
+		.container-footer-SN {
+			display: flex;
+			bottom: 0;
+			width: 100%;
+			background-color: rgb(229 231 235);
+			text-align: center;
+			padding: 1rem 10rem;
+			justify-content: center;
+		}
+
+		.container-socialNetworkGray {
+			width: 100%;
+			display: flex;
+			gap: 0.75rem;
+			padding-right: 0.5rem;
+			color: rgb(255 255 255);
+			justify-content: flex-end;
+			align-items: center;
+	}
+
+	.container-socialNetworkGray img {
+			height: 1.65rem;
+	}
+  }
+/* -----------------------------------contenedores imagenes XL------------------------------------------ */
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    /* Aquí colocarías tus estilos para pantallas XL */
+	.container-body-mdOrUpper {
+        display: block;
+        display: flex;
+        width: 100%;
+	}
+
+	.container-body-mdOrLower {
+        display: none;
+	}
+
+    .container-hamburguerMenu {
+        display: none;
+    }
+
+    .container-header {
+        position: fixed;
+        width: 100%;
+        height: 6rem;
+        box-shadow:5px 5px 5px 0px rgba(128, 128, 128, 0.7);
+        align-items: center;
+    }
+
+    .container-socialNetwork {
+        width: 100%;
+        display: flex;
+        gap: 0.75rem;
+        padding-right: 0.5rem;
+        color: rgb(255 255 255);
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .container-socialNetwork img {
+        height: 1.5rem;
+    }
+
+    .container-mainMenu {
+        align-items: center;
+        justify-content: center;
+        padding-right: 16rem;
+        display: flex;
+        gap: 4rem;
+        color: rgb(255 255 255);
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+
+    .container-main {
+        padding-top: 7rem;
+    }
+
+	.container-verticalImage {
+        margin: 10px 10px 10px 0;
+        width: 30%;
+	}
+
+    .container-horizontal-Total {
+        width: 40%;
+    }
+
+	.container-horizontalImage {
+			margin: 10px 0 10px 0;
+			height: 315px;
+            width: 100%;
+	}
+
+	.container-phraseVertical1 {
+        margin: auto;
+        display: inline-block;
+        align-items: center;
+        border-top-right-radius: 624rem;
+        border-bottom-right-radius: 624rem;
+        font-size: 1.875rem/* 48px */;
+        line-height: 2.25rem;
+        margin-top: -610px;
+        width: 80%;
+        padding: 10px;
+        background-color: rgb(107, 114, 128, 0.5);
+        color:rgb(255 255 255);
+        text-align: center;
+	}
+
+	.container-phraseVertical2 {
+        margin: auto;
+        display: inline-block;
+        align-items: center;
+        border-top-left-radius: 624rem;
+        border-bottom-left-radius: 624rem;
+        font-size: 1.875rem/* 48px */;
+        line-height: 2.25rem;
+        margin-top: -105px;
+        width: 80%;
+        padding: 10px;
+        background-color: rgb(107,, 114,, 128,, 0.5);
+        color:rgb(255 255 255);
+        text-align: center;
+	}
+
+	.container-phraseHorizontal {
+        margin: auto;
+        display: inline-block;
+        align-items: center;
+        border-radius: 624rem;
+        font-size: 1.875rem/* 48px */;
+        line-height: 2.25rem;
+        margin-top: -190px;
+        width: 80%;
+        padding: 10px;
+        background-color: rgb(107, 114, 128, 0.5);
+        color:rgb(255 255 255);
+        text-align: center;
+	}
+
+	.container-phraseLogo {
+        margin-left: 0.5rem;
+        padding-top: 0.5rem;
+        width: 70%;
+        align-items: center;
+        color: rgb(255 255 255);
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+	.container-slogan {
+		height: 3.5rem;
+		font-size: 1.875rem/* 48px */;
+    line-height: 2.25rem;
+		text-align: center;
+		padding: 0 0 2rem 0;
+	}
+
+	.logo-image {
+			height: 5rem;
+			margin-left: 0.25rem;
+            width: 30%;
+	}
+
+	.horizontal-image {
+			width: 100%;
+			height: 305px;
+	}
+
+	.vertical-image {
+			width: 100%;
+			height: 630px;
+	}
+
+	.bg-gradient-buttom {
+		align-items: center;
+		color: rgb(255 255 255);
+		font-size: 1.875rem;
+		line-height: 2.25rem;
+		padding: 0.75rem 1.5rem;
+	}
+
+	.bg-gradient-buttom p {
+		padding-left: 1rem;
+	}
+
+	.container-footer {
+		display: flex;
+		bottom: 0;
+		width: 100%;
+		background-color: rgb(229 231 235);
+		text-align: center;
+		padding: 3.5rem 6rem;
+		justify-content: space-between;
+		box-shadow:5px -5px 5px 0px rgba(128, 128, 128, 0.7);
+	}
+
+	.container-footer h2{
+		font-weight: 700;
+	}
+	.container-footer p{
+		font-weight: 100;
+	}
+
+	.container-footer-SN {
+		display: flex;
+		bottom: 0;
+		width: 100%;
+		background-color: rgb(229 231 235);
+		text-align: center;
+		padding: 1rem 10rem;
+		justify-content: center;
+	}
+
+	.container-socialNetworkGray {
+		width: 100%;
+		display: flex;
+		gap: 0.75rem;
+		padding-right: 0.5rem;
+		color: rgb(255 255 255);
+		justify-content: flex-end;
+		align-items: center;
+}
+
+.container-socialNetworkGray img {
+		height: 1.5rem;
+}
+}
+/* -----------------------------------contenedores imagenes LG------------------------------------------ */
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Aquí colocarías tus estilos para pantallas LG */
+    .container-body-mdOrUpper {
+        display: block;
+        display: flex;
+        width: 100%;
+    }
+
+    .container-body-mdOrLower  {
+        display: none;
+    }
+
+    .container-hamburguerMenu {
+        display: none;
+    }
+
+    .container-header {
+        position: fixed;
+        width: 100%;
+        height: 5rem;
+        box-shadow:5px 5px 5px 0px rgba(128, 128, 128, 0.5);
+        align-items: center;
+    }
+
+    .container-socialNetwork {
+        width: 100%;
+        display: flex;
+        gap: 0.75rem;
+        padding-right: 0.5rem;
+        color: rgb(255 255 255);
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .container-socialNetwork img {
+        height: 1.25rem;
+    }
+
+    .container-mainMenu {
+        align-items: center;
+        justify-content: center;
+        padding-right: 14rem;
+        display: flex;
+        gap: 2.5rem;
+        color: rgb(255 255 255);
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+
+    .container-main {
+        padding-top: 6rem;
+    }
+
+    .container-verticalImage {
+        margin: 10px 10px 10px 0;
+        width: 30%;
+    }
+
+    .container-horizontal-Total {
+        width: 40%;
+    }
+
+    .container-horizontalImage {
+        margin: 10px 0 10px 0;
+        height: 210px;
+    }
+
+    .container-phraseVertical1 {
+        margin: auto;
+        display: inline-block;
+        align-items: center;
+        border-top-right-radius: 624rem;
+        border-bottom-right-radius: 624rem;
+        font-size: 1.5rem/* 48px */;
+        line-height: 2.rem;
+        margin-top: -420px;
+        width: 80%;
+        padding: 10px;
+        background-color: rgb(107, 114, 128, 0.5);
+        color: rgb(255 255 255);
+        text-align: center;
+    }
+
+    .container-phraseVertical2 {
+        margin: auto;
+        display: inline-block;
+        align-items: center;
+        border-top-left-radius: 624rem;
+        border-bottom-left-radius: 624rem;
+        font-size: 1.5rem/* 48px */;
+        line-height: 2.rem;
+        margin-top: -100px;
+        width: 80%;
+        padding: 10px;
+        background-color: rgb(107, 114, 128, 0.5);
+        color: rgb(255 255 255);
+        text-align: center;
+    }
+
+    .container-phraseHorizontal {
+        margin: auto;
+        display: inline-block;
+        align-items: center;
+        border-radius: 624rem;
+        font-size: 1.5rem/* 48px */;
+        line-height: 2.rem;
+        margin-top: -130px;
+        width: 80%;
+        padding: 5px;
+        background-color: rgb(107, 114, 128, 0.5);
+        color: rgb(255 255 255);
+        text-align: center;
+    }
+
+    .container-phraseLogo {
+        margin-left: 0.01rem;
+        padding-top: 0.5rem;
+        width: 70%;
+        align-items: center;
+        color: rgb(255 255 255);
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    .container-slogan {
+        height: 3.5rem;
+        font-size: 3rem;
+        line-height: 1;
+				text-align: center;
+				padding: 0 0 2rem 0;
+    }
+
+    .logo-image {
+        height: 4rem;
+        width: 30%;
+        margin-left: 0.01rem;
+    }
+
+    .horizontal-image {
+        width: 100%;
+        height: 210px;
+    }
+
+    .vertical-image {
+        width: 100%;
+        height: 430px;
+    }
+
+    .bg-gradient-buttom {
+		align-items: center;
+		color: rgb(255 255 255);
+		font-size: 1.5rem/* 48px */;
+        line-height: 2.rem;
+		padding: 0.75rem 1.5rem;
+	}
+
+	.bg-gradient-buttom p {
+		padding-left: 1rem;
+	}
+
+	.container-footer {
+		display: flex;
+		bottom: 0;
+		width: 100%;
+		background-color: rgb(229 231 235);
+		text-align: center;
+		padding: 2.5rem 5rem;
+		justify-content: space-between;
+		box-shadow:5px -5px 5px 0px rgba(128, 128, 128, 0.7);
+	}
+
+	.container-footer h2{
+		font-weight: 700;
+	}
+	.container-footer p{
+		font-weight: 100;
+	}
+
+	.container-footer-SN {
+		display: flex;
+		bottom: 0;
+		width: 100%;
+		background-color: rgb(229 231 235);
+		text-align: center;
+		padding: 1rem 10rem;
+		justify-content: center;
+	}
+
+	.container-socialNetworkGray {
+		width: 100%;
+		display: flex;
+		gap: 0.75rem;
+		padding-right: 0.5rem;
+		color: rgb(255 255 255);
+		justify-content: flex-end;
+		align-items: center;
+}
+
+.container-socialNetworkGray img {
+		height: 1.25rem;
+}
+}
+
+/* -----------------------------------contenedores imagenes MD------------------------------------------ */
+  /* Estilos para pantallas medianas-pequeñas (MD) */
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    /* Aquí colocarías tus estilos para pantallas MD */
+    .container-body-mdOrUpper {
+        display: block;
+        display: flex;
+        width: 100%;
+    }
+
+    .container-body-mdOrLower  {
+        display: none;
+    }
+
+    .container-hamburguerMenu {
+        display: none;
+    }
+
+    .container-header {
+        position: fixed;
+        width: 100%;
+        height: 3rem;
+        box-shadow:5px 5px 5px 0px rgba(128, 128, 128, 0.5);
+        align-items: center;
+    }
+
+    .container-socialNetwork {
+        width: 100%;
+        margin-top: -0.5rem;
+        display: flex;
+        gap: 0.25rem;
+        padding-right: 0.5rem;
+        color: rgb(255 255 255);
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .container-socialNetwork img {
+        height: 1rem;
+    }
+
+    .container-mainMenu {
+        align-items: center;
+        justify-content: center;
+        padding-right: 7rem;
+        display: flex;
+        gap: 0.75rem;
+        color: rgb(255 255 255);
+        font-size: 0.75rem;
+        line-height: 1rem;
+    }
+
+    .container-main {
+        padding-top: 3rem;
+    }
+
+    .container-verticalImage {
+        margin: 10px 10px 10px 0;
+        width: 30%;
+    }
+
+    .container-horizontal-Total {
+        width: 40%;
+    }
+
+    .container-horizontalImage {
+        margin: 10px 0 10px 0;
+        height: 135px;
+    }
+
+    .container-phraseVertical1 {
+        margin: auto;
+        display: inline-block;
+        align-items: center;
+        border-top-right-radius: 624rem;
+        border-bottom-right-radius: 624rem;
+        font-size: 0.8rem;
+        line-height: 1.25rem;
+        margin-top: -270px;
+        width: 80%;
+        padding: 5px;
+        background-color: rgb(107, 114, 128, 0.5);
+        color: rgb(255 255 255);
+        text-align: center;
+    }
+
+    .container-phraseVertical2 {
+        margin: auto;
+        display: inline-block;
+        align-items: center;
+        border-top-left-radius: 624rem;
+        border-bottom-left-radius: 624rem;
+        font-size: 0.8rem;
+        line-height: 1.25rem;
+        margin-top: -70px;
+        width: 80%;
+        padding: 10px;
+        background-color: rgb(107, 114, 128, 0.5);
+        color: rgb(255 255 255);
+        text-align: center;
+    }
+
+    .container-phraseHorizontal {
+        margin: auto;
+        display: inline-block;
+        align-items: center;
+        border-radius: 624rem;
+        font-size: 0.8rem;
+        line-height: 1.25rem;
+        margin-top: -80px;
+        width: 80%;
+        padding: 5px;
+        background-color: rgb(107, 114, 128, 0.5);
+        color: rgb(255 255 255);
+        text-align: center;
+    }
+
+    .container-phraseLogo {
+        margin-left: 0.1rem;
+        padding-top: 0.5rem;
+        width: 70%;
+        align-items: center;
+        color: rgb(255 255 255);
+        font-size: 1.25rem;
+        line-height: 2rem;
+    }
+
+    .container-slogan {
+        height: 3.5rem;
+        font-size: 1.25rem;
+        line-height: 2.1rem;
+				text-align: center;
+				padding: 0 0 2rem 0;
+    }
+
+    .logo-image {
+        height: 2rem;
+        width: 30%;
+        margin-left: 0.1rem;
+    }
+
+    .horizontal-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .vertical-image {
+        width: 100%;
+        height: 280px;
+    }
+
+	.bg-gradient-buttom {
+		align-items: center;
+		color: rgb(255 255 255);
+		font-size: 0.8rem;
+        line-height: 0.85rem;
+		padding: 0.4rem 0.6rem;
+	}
+
+	.bg-gradient-buttom p {
+		padding-left: 0.5rem;
+        font-size: 0.85rem;
+        line-height: 1.25rem;
+	}
+
+	.container-footer {
+		display: flex;
+		bottom: 0;
+		width: 100%;
+		background-color: rgb(229 231 235);
+		text-align: center;
+		padding: 1.5rem 2rem;
+		justify-content: space-between;
+		box-shadow:5px -5px 5px 0px rgba(128, 128, 128, 0.7);
+		font-size: 0.65rem;
+    line-height: 1.25rem;
+	}
+
+	.container-footer h2{
+		font-weight: 700;
+	}
+	.container-footer p{
+		font-weight: 100;
+	}
+
+	.container-footer-SN {
+		display: flex;
+		bottom: 0;
+		width: 100%;
+		background-color: rgb(229 231 235);
+		text-align: center;
+		padding: 1rem 10rem;
+		justify-content: center;
+	}
+
+	.container-socialNetworkGray {
+		width: 100%;
+		margin-top: -0.5rem;
+		display: flex;
+		gap: 0.25rem;
+		color: rgb(255 255 255);
+		justify-content: flex-end;
+		align-items: center;
+}
+
+.container-socialNetworkGray img {
+		height: 1rem;
+}
+}
+
+  /* -----------------------------------contenedores imagenes SM------------------------------------------ */
+  /* Estilos para pantallas pequeñas (SM) */
+  @media only screen and (max-width: 480px) {
+    /* Aquí colocarías tus estilos para pantallas SM */
+    .container-body-mdOrUpper {
+        display: none;
+    }
+
+    .container-body-mdOrLower  {
+        display: block;
+    }
+
+    .container-header {
+        position: fixed;
+        width: 100%;
+        height: 2.8rem;
+        box-shadow:5px 5px 5px 0px rgba(128, 128, 128, 0.5);
+        align-items: center;
+    }
+
+    .container-socialNetwork {
+        display: none;
+    }
+
+    .container-mainMenu {
+       display: none;
+    }
+
+		.container-hamburguer {
+			width: 100%;
+			margin-top: -0.5rem;
+			display: flex;
+			gap: 0.25rem;
+			padding-right: 0.5rem;
+			color: rgb(255 255 255);
+			justify-content: flex-end;
+			align-items: center;
+		}
+
+    .container-main {
+        padding-top: 3rem;
+    }
+
+    .container-verticalImage {
+        margin: 0.5rem 0 0.5rem 0;
+        width: 50%;
+    }
+
+    .container-horizontalImage {
+        margin: 0 0 0.5rem 0;
+        height: 210px;
+        width: 100%;
+    }
+
+    .container-phraseVertical1 {
+        margin: auto;
+        display: inline-block;
+        align-items: center;
+        border-top-right-radius: 624rem;
+        border-bottom-right-radius: 624rem;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        margin-top: -320px;
+        width: 80%;
+        padding: 5px;
+        background-color: rgb(107, 114, 128, 0.5);
+        color: rgb(255 255 255);
+        text-align: center;
+    }
+
+    .container-phraseVertical2 {
+        margin: auto;
+        display: inline-block;
+        align-items: center;
+        border-top-left-radius: 624rem;
+        border-bottom-left-radius: 624rem;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        margin-top: -100px;
+        width: 80%;
+        padding: 10px;
+        background-color: rgb(107, 114, 128, 0.5);
+        color: rgb(255 255 255);
+        text-align: center;
+    }
+
+    .container-phraseHorizontal {
+        margin: auto;
+        display: inline-block;
+        align-items: center;
+        border-radius: 624rem;
+        font-size: 1rem;
+        line-height: 1.25rem;
+        margin-top: -110px;
+        width: 80%;
+        padding: 5px;
+        background-color: rgb(107, 114, 128, 0.5);
+        color: rgb(255 255 255);
+        text-align: center;
+    }
+
+    .container-phraseLogo {
+        margin-left: 0.10rem;
+        padding-top: 0;
+        width: 9rem;
+        align-items: center;
+        color: rgb(255 255 255);
+        font-size: 1.1rem;
+        line-height: 2rem;
+    }
+
+    .container-slogan {
+        height: 1.5rem;
+        font-size: 1rem;
+        line-height: 1.25rem;
+				text-align: center;
+				padding: 0 0 2rem 0;
+    }
+
+    .logo-image {
+        height: 2rem;
+        width: 2.5rem;
+        margin-left: 0;
+        margin-top: -0.5rem;
+    }
+
+    .horizontal-image {
+        margin:auto;
+        width: 100%;
+        height: 100%;
+    }
+
+    .vertical-image {
+        width: 100%;
+        height: 330px;
+    }
+
+    .bg-gradient-buttom {
+        border-width: 0.0625rem;
+        border-radius: 624rem;
+        color: rgb(255 255 255);
+        font-size: 0.75rem;
+        line-height: 1.75rem;
+        padding: 0.10rem 1.25rem
+    }
+
+    .bg-gradient-buttom p {
+        font-size: 0.75rem;
+        line-height: 1.5rem;
+        padding: 0.1rem 0 0.1rem 0.15rem
+    }
+
+		.container-footer {
+
+			display: flex;
+			bottom: 0;
+			width: 100%;
+			background-color: rgb(229 231 235);
+			text-align: center;
+			padding: 0.5rem 1rem;
+			justify-content: space-between;
+			box-shadow:5px -5px 5px 0px rgba(128, 128, 128, 0.7);
+			font-size: 0.5rem;
+    	line-height: 1.25rem;
+		}
+
+		.container-footer h2{
+			font-weight: 700;
+		}
+		.container-footer p{
+			font-weight: 100;
+		}
+
+		.container-footer-SN {
+			display: flex;
+			bottom: 0;
+			width: 100%;
+			background-color: rgb(229 231 235);
+			text-align: center;
+			padding: 1rem 0;
+			justify-content: center;
+		}
+
+		.container-socialNetworkGray {
+			width: 100%;
+			margin-top: -0.5rem;
+			display: flex;
+			gap: 0.25rem;
+			color: rgb(255 255 255);
+			justify-content: flex-end;
+			align-items: center;
+	}
+
+	.container-socialNetworkGray img {
+			height: 1rem;
+	}
+}
+
+/*----------------------------------------------------------------*/
+
+
+.bg-gradient {
+    background: linear-gradient(to right, #012959, #0249a1, #1e76a5, #0249a1, #012959 );
+}
+
+.bg-gradient-buttom {
+	margin: auto;
+	display: flex;
+	border-width: 0.0625rem;
+	border-radius: 624rem;
+  background: linear-gradient(to right, #0249a1, #1e76a5, #0249a1 );
+}
+
+.menu-item {
+    @apply py-5 px-4 hover:text-sky-100;
+}
+
