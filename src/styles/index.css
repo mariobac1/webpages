@@ -18,7 +18,11 @@ body {
     flex-direction: column;
 }
 
-
+.container-titleBoxes {
+    background: linear-gradient(to right, #012959, #0249a1, #1e76a5, #0249a1, #012959);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 .container-slogan {
   background: linear-gradient(to right, #012959, #0249a1, #1e76a5, #0249a1, #012959);
@@ -28,6 +32,10 @@ body {
 
 /* -----------------------------------contenedores imagenes 2XL------------------------------------------ */
 @media only screen and (min-width: 1441px) {
+    .container-mdTO2xl {
+        display: block;
+        width: 100%;
+    }
     .container-body-mdOrUpper {
         display: block;
         display: flex;
@@ -154,8 +162,8 @@ body {
         height: 3.5;
         font-size: 3rem;
         line-height: 1;
-				text-align: center;
-				padding: 0 0 2rem 0;
+        text-align: center;
+        padding: 0 0 2rem 0;
     }
 
     .logo-image {
@@ -186,42 +194,64 @@ body {
         padding-left: 1rem;
     }
 
-		.container-footer {
-			display: flex;
-			bottom: 0;
-			width: 100%;
-			background-color: rgb(229 231 235);
-			text-align: center;
-			padding: 3.5rem 10rem;
-			justify-content: space-between;
-			box-shadow:5px -5px 5px 0px rgba(128, 128, 128, 0.7);
-		}
+    .container-titleBoxes {
+        margin-left: auto;
+        margin-right: auto;
+        height: 3.5;
+        font-size: 3rem;
+        line-height: 1;
+        text-align: center;
+        padding: 0 0 2rem 0;
+    }
 
-		.container-footer h2{
-			font-weight: 700;
-		}
-		.container-footer p{
-			font-weight: 100;
-		}
+    .container-titleBoxes h2 {
+        font-weight: 700;
+        font-family: "Sansita";
+        margin-bottom: 2rem;
+    }
 
-		.container-footer-SN {
-			display: flex;
-			bottom: 0;
-			width: 100%;
-			background-color: rgb(229 231 235);
-			text-align: center;
-			padding: 1rem 10rem;
-			justify-content: center;
-		}
+    .container-titleBoxes  p{
+        font-size: 2.5rem;
+        font-family: "Shadows Into Light";
+        margin-bottom: 2rem;
+    }
 
-		.container-socialNetworkGray {
-			width: 100%;
-			display: flex;
-			gap: 0.75rem;
-			padding-right: 0.5rem;
-			color: rgb(255 255 255);
-			justify-content: flex-end;
-			align-items: center;
+    .container-footer {
+        display: flex;
+        bottom: 0;
+        width: 100%;
+        background-color: rgb(229 231 235);
+        text-align: center;
+        padding: 3.5rem 10rem;
+        justify-content: space-between;
+        box-shadow:5px -5px 5px 0px rgba(128, 128, 128, 0.7);
+    }
+
+    .container-footer h2{
+        font-weight: 700;
+    }
+    .container-footer p{
+        font-weight: 100;
+    }
+
+    .container-footer-SN {
+        display: flex;
+        bottom: 0;
+        width: 100%;
+        background-color: rgb(229 231 235);
+        text-align: center;
+        padding: 1rem 10rem;
+        justify-content: center;
+    }
+
+    .container-socialNetworkGray {
+        width: 100%;
+        display: flex;
+        gap: 0.75rem;
+        padding-right: 0.5rem;
+        color: rgb(255 255 255);
+        justify-content: flex-end;
+        align-items: center;
 	}
 
 	.container-socialNetworkGray img {
@@ -231,6 +261,11 @@ body {
 /* -----------------------------------contenedores imagenes XL------------------------------------------ */
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
     /* Aquí colocarías tus estilos para pantallas XL */
+    .container-mdTO2xl {
+        display: block;
+        width: 100%;
+    }
+
 	.container-body-mdOrUpper {
         display: block;
         display: flex;
@@ -390,6 +425,28 @@ body {
 		padding-left: 1rem;
 	}
 
+    .container-titleBoxes {
+        margin-left: auto;
+        margin-right: auto;
+        height: 3.5;
+        font-size: 3rem;
+        line-height: 1;
+        text-align: center;
+        padding: 0 0 2rem 0;
+    }
+
+    .container-titleBoxes h2 {
+        font-weight: 700;
+        font-family: "Sansita";
+        margin-bottom: 2rem;
+    }
+
+    .container-titleBoxes  p{
+        font-size: 2.5rem;
+        font-family: "Shadows Into Light";
+        margin-bottom: 2rem;
+    }
+
 	.container-footer {
 		display: flex;
 		bottom: 0;
@@ -435,6 +492,11 @@ body {
 /* -----------------------------------contenedores imagenes LG------------------------------------------ */
   @media only screen and (min-width: 769px) and (max-width: 1024px) {
     /* Aquí colocarías tus estilos para pantallas LG */
+    .container-mdTO2xl {
+        display: block;
+        width: 100%;
+    }
+
     .container-body-mdOrUpper {
         display: block;
         display: flex;
@@ -559,10 +621,10 @@ body {
 
     .container-slogan {
         height: 3.5rem;
-        font-size: 3rem;
+        font-size: 2.5rem;
         line-height: 1;
-				text-align: center;
-				padding: 0 0 2rem 0;
+        text-align: center;
+        padding: 0 0 2rem 0;
     }
 
     .logo-image {
@@ -592,6 +654,29 @@ body {
 	.bg-gradient-buttom p {
 		padding-left: 1rem;
 	}
+
+    .container-titleBoxes {
+        margin-left: auto;
+        margin-right: auto;
+        height: 3.5;
+        font-size: 3rem;
+        line-height: 1;
+        text-align: center;
+        padding: 0 0 2rem 0;
+    }
+
+    .container-titleBoxes h2 {
+        font-weight: 700;
+        font-size: 2.5rem;
+        font-family: "Sansita";
+        margin-bottom: 1em;
+    }
+
+    .container-titleBoxes  p{
+        font-size: 2rem;
+        font-family: "Shadows Into Light";
+        margin-bottom: 1em;
+    }
 
 	.container-footer {
 		display: flex;
@@ -640,6 +725,11 @@ body {
   /* Estilos para pantallas medianas-pequeñas (MD) */
   @media only screen and (min-width: 481px) and (max-width: 768px) {
     /* Aquí colocarías tus estilos para pantallas MD */
+    .container-mdTO2xl {
+        display: block;
+        width: 100%;
+    }
+
     .container-body-mdOrUpper {
         display: block;
         display: flex;
@@ -801,6 +891,27 @@ body {
         line-height: 1.25rem;
 	}
 
+    .container-titleBoxes {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.25rem;
+        line-height: 1.5em;
+        text-align: center;
+    }
+
+    .container-titleBoxes h2 {
+        font-weight: 700;
+        font-family: "Sansita";
+        margin-bottom: 0.5em;
+    }
+
+    .container-titleBoxes  p{
+        font-size: 1rem;
+        font-family: "Shadows Into Light";
+        margin-bottom: 0.75em;
+    }
+
 	.container-footer {
 		display: flex;
 		bottom: 0;
@@ -850,6 +961,10 @@ body {
   /* Estilos para pantallas pequeñas (SM) */
   @media only screen and (max-width: 480px) {
     /* Aquí colocarías tus estilos para pantallas SM */
+    .container-mdTO2xl {
+        display: none;
+    }
+
     .container-body-mdOrUpper {
         display: none;
     }
@@ -961,8 +1076,8 @@ body {
         height: 1.5rem;
         font-size: 1rem;
         line-height: 1.25rem;
-				text-align: center;
-				padding: 0 0 2rem 0;
+        text-align: center;
+        padding: 0 0 2rem 0;
     }
 
     .logo-image {
@@ -998,45 +1113,65 @@ body {
         padding: 0.1rem 0 0.1rem 0.15rem
     }
 
-		.container-footer {
+    .container-titleBoxes {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.25rem;
+        line-height: 1.5em;
+        text-align: center;
+    }
 
-			display: flex;
-			bottom: 0;
-			width: 100%;
-			background-color: rgb(229 231 235);
-			text-align: center;
-			padding: 0.5rem 1rem;
-			justify-content: space-between;
-			box-shadow:5px -5px 5px 0px rgba(128, 128, 128, 0.7);
-			font-size: 0.5rem;
-    	line-height: 1.25rem;
-		}
+    .container-titleBoxes h2 {
+        font-weight: 700;
+        font-family: "Sansita";
+        margin-bottom: 0.5em;
+    }
 
-		.container-footer h2{
-			font-weight: 700;
-		}
-		.container-footer p{
-			font-weight: 100;
-		}
+    .container-titleBoxes  p{
+        font-size: 1rem;
+        font-family: "Shadows Into Light";
+        margin-bottom: 0.75em;
+    }
 
-		.container-footer-SN {
-			display: flex;
-			bottom: 0;
-			width: 100%;
-			background-color: rgb(229 231 235);
-			text-align: center;
-			padding: 1rem 0;
-			justify-content: center;
-		}
+    .container-footer {
 
-		.container-socialNetworkGray {
-			width: 100%;
-			margin-top: -0.5rem;
-			display: flex;
-			gap: 0.25rem;
-			color: rgb(255 255 255);
-			justify-content: flex-end;
-			align-items: center;
+        display: flex;
+        bottom: 0;
+        width: 100%;
+        background-color: rgb(229 231 235);
+        text-align: center;
+        padding: 0.5rem 1rem;
+        justify-content: space-between;
+        box-shadow:5px -5px 5px 0px rgba(128, 128, 128, 0.7);
+        font-size: 0.5rem;
+    line-height: 1.25rem;
+    }
+
+    .container-footer h2{
+        font-weight: 700;
+    }
+    .container-footer p{
+        font-weight: 100;
+    }
+
+    .container-footer-SN {
+        display: flex;
+        bottom: 0;
+        width: 100%;
+        background-color: rgb(229 231 235);
+        text-align: center;
+        padding: 1rem 0;
+        justify-content: center;
+    }
+
+    .container-socialNetworkGray {
+        width: 100%;
+        margin-top: -0.5rem;
+        display: flex;
+        gap: 0.25rem;
+        color: rgb(255 255 255);
+        justify-content: flex-end;
+        align-items: center;
 	}
 
 	.container-socialNetworkGray img {

@@ -15,7 +15,7 @@ const Home = () => {
 		<div className="container-main">
 			{showEventModal && <EventModal />}
 			<Slogan />
-			<div>
+			<div className="container-mdTO2xl">
 				<div className="container-body-mdOrUpper">
 					<ImageVertical1 />
 					<ImageVertical2 />
@@ -24,7 +24,9 @@ const Home = () => {
 						<ImageHorizontal2 />
 					</div>
 				</div>
-				<InfoBox />
+				<div>
+					<InfoBox />
+				</div>
 			</div>
 			<div className="container-body-mdOrLower">
 				<div className="flex w-full">
@@ -34,6 +36,9 @@ const Home = () => {
 				<div className="">
 					<ImageHorizontal1 />
 					<ImageHorizontal2 />
+				</div>
+				<div>
+					<InfoBox />
 				</div>
 			</div>
 		</div>
