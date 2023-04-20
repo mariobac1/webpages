@@ -1,8 +1,8 @@
 import axios from "axios"
 import { useContext, useState } from "react"
-import { API_URL } from "../../constants/env"
-import GlobalContext from "../../contexts/GlobalContext"
-import { token } from "../../helpers/auth"
+import { API_URL } from "../../../constants/env"
+import GlobalContext from "../../../contexts/GlobalContext"
+import { token } from "../../../helpers/auth"
 
 const FormImage = () => {
 	const { IDimage, homeImageID, setShowEventModal } = useContext(GlobalContext)
@@ -56,7 +56,7 @@ const FormImage = () => {
 	if (error) return <h1>{error?.message}</h1>
 
 	return (
-		<form className="w-full rounded-lg shadow-2xl" onSubmit={handleSubmit}>
+		<form className="" onSubmit={handleSubmit}>
 			<div>
 				<label htmlFor="nombre">Color:</label>
 				<input
@@ -83,12 +83,12 @@ const FormImage = () => {
 					type="file"
 					id="file"
 					name="file"
-					className="block w-full text-sm text-slate-500
-					file:mr-4 file:py-2 file:px-4
-					file:rounded-full file:border-0
-					file:text-sm file:font-semibold
-					file:bg-violet-50 file:text-violet-700
-					hover:file:bg-violet-100"
+					// className="block w-full text-sm text-slate-500
+					// file:mr-4 file:py-2 file:px-4
+					// file:rounded-full file:border-0
+					// file:text-sm file:font-semibold
+					// file:bg-violet-50 file:text-violet-700
+					// hover:file:bg-violet-100"
 					accept="image/jpeg,image/png,image/jpg"
 					onChange={handleFileChange}
 				/>

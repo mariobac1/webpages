@@ -6,17 +6,20 @@ import { token } from "../../../helpers/auth"
 import Loader from "../../atoms/Loader"
 import { LOGO_ID } from "../../../constants/env"
 import { IMAGE_HOME_URL } from "../../../constants/env"
+import { Link } from "react-router-dom"
 
 const Logo = () => {
-	const { setIDimage, setShowEventModal } = useContext(GlobalContext)
+	const { setIDimage, setShowEventModal, setHomeImageID, userData } =
+		useContext(GlobalContext)
 	const [logo, setLogo] = useState()
 	const [route, setRoute] = useState()
 	const [error, setError] = useState()
 	const [loading, setLoading] = useState(true)
 
-	const changeData = () => {
+	const changeData = (id, name) => {
 		setShowEventModal(true)
-		setIDimage("logo")
+		setHomeImageID(id)
+		setIDimage(name)
 	}
 
 	useEffect(() => {
@@ -46,21 +49,19 @@ const Logo = () => {
 	if (loading) return <Loader />
 
 	return (
-		<div className="flex">
-			{/* <button className=" ml-2 mt-12" onClick={changeData}>
-				<span className="border  border-gray-400  px-1 rounded-full material-icons-outlined text-gray-400 text-sm">
-					edit
-				</span>
-			</button> */}
-			<div className="flex items-center">
-				<img className="logo-image" src={route} alt="logo" />
-				<p
-					className="container-phraseLogo  text-overflow"
-					style={{ fontFamily: "Inspiration" }}
-				>
+		<div className="container-logoEdit">
+			{userData && (
+				<button onClick={() => changeData(logo.id, logo.name)}>
+					<span className="icons material-icons-outlined">edit</span>
+				</button>
+			)}
+
+			<Link className="container-logo" to="/">
+				<img className="logo" src={route} alt="logo" />
+				<p className="brand" style={{ color: logo.color }}>
 					{logo && logo.description}
 				</p>
-			</div>
+			</Link>
 		</div>
 	)
 }

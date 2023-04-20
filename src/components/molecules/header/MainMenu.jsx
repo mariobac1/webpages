@@ -3,30 +3,21 @@ import HamburguerMenu from "./Hamburguer"
 
 const MainMenu = () => {
 	return (
-		<nav>
-			<ul className="container-mainMenu">
-				<li
-					className="hover:text-gray-100 hover:font-semibold"
-					style={{ fontFamily: "Delicious Handrawn" }}
-				>
+		<nav className="container-mainMenu">
+			<ul className="mainMenu">
+				<li className="" style={{ fontFamily: "Delicious Handrawn" }}>
 					<Link to="/">INICIO</Link>
 				</li>
-				<p>|</p>
-				<li
-					className="hover:text-gray-100 hover:font-semibold"
-					style={{ fontFamily: "Delicious Handrawn" }}
-				>
+				<li>|</li>
+				<li className="" style={{ fontFamily: "Delicious Handrawn" }}>
 					<Link to="/producto">PRODUCTOS</Link>
 				</li>
-				<p>|</p>
-				<li
-					className="hover:text-gray-100 hover:font-semibold"
-					style={{ fontFamily: "Delicious Handrawn" }}
-				>
+				<li>|</li>
+				<li className="" style={{ fontFamily: "Delicious Handrawn" }}>
 					<Link to="/contact">CONTACTO</Link>
 				</li>
 			</ul>
-			<div className="container-hamburguerMenu">
+			<div className="hamburguerMenu">
 				<HamburguerMenu />
 			</div>
 		</nav>

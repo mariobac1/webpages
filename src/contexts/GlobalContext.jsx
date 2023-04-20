@@ -13,6 +13,8 @@ const GlobalContext = createContext({
 	setIDimage: () => {},
 	homeImageID: "",
 	setHomeImageID: () => {},
+	userData: "",
+	setUserData: () => {},
 })
 
 export default GlobalContext
