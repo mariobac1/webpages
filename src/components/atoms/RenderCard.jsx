@@ -47,8 +47,18 @@ const RenderCard = ({ value }) => {
 							}?time=${new Date().getTime()}`}
 							alt={card.name}
 						/>
-						<h4 style={{ color: card.color }}>{card.details.title}</h4>
-						<p style={{ color: card.color }}>{card.description}</p>
+						<h4
+							className={`${card.color}`}
+							style={{ color: card.color, fontFamily: card.details.font }}
+						>
+							{card.details.title}
+						</h4>
+						<p
+							className={`${card.color}`}
+							style={{ color: card.color, fontFamily: card.details.font }}
+						>
+							{card.description}
+						</p>
 						{userData && (
 							<button onClick={() => changeData(card.id, card.name)}>
 								<span className="icons material-icons-outlined">edit</span>

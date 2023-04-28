@@ -47,7 +47,12 @@ const RenderImage = ({ value }) => {
 							}?time=${new Date().getTime()}`}
 							alt={card.name}
 						/>
-						<h4 style={{ color: card.color }}>{card.description}</h4>
+						<h4
+							className={`${card.color}`}
+							style={{ color: card.color, fontFamily: card.details.font }}
+						>
+							{card.description}
+						</h4>
 						{userData && (
 							<button onClick={() => changeData(card.id, card.name)}>
 								<span className="icons material-icons-outlined">edit</span>

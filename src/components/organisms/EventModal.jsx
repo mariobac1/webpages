@@ -6,14 +6,21 @@ const EventModal = () => {
 	const { IDimage, setShowEventModal } = useContext(GlobalContext)
 
 	return (
-		<div className="">
-			<header className="">
-				<p className="">Cambio de {IDimage}</p>
-				<button onClick={() => setShowEventModal(false)}>
-					<span className="">close</span>
-				</button>
-			</header>
-			<FormImage />
+		<div className="container-window">
+			<div className="container-windowForm">
+				<div className="container-windowTop">
+					<p className="">Cambio de {IDimage}</p>
+					<button onClick={() => setShowEventModal(false)}>
+						<span
+							className="material-icons-outlined"
+							style={{ color: "white" }}
+						>
+							close
+						</span>
+					</button>
+				</div>
+				<FormImage />
+			</div>
 		</div>
 	)
 }

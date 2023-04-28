@@ -1,0 +1,33 @@
+$height-header: 5.5rem;
+
+main {
+  padding-top: $height-header;
+}
+
+.container-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.container-slogan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-title div, .container-title span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.icon-inButton {
+  padding-left: 0.15rem;
+  font-size: 1.15rem;
+  @media only screen and (max-width: 599px) {
+      font-size: .95rem;
+  }
+}

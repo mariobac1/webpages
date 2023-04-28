@@ -17,7 +17,7 @@ indent_style = tab
 
 
 # Indentation override for all JS
-[*.{js,ts}]
+[*.{js,ts,html,css,scss}]
 indent_style = space
 indent_size = 2
 

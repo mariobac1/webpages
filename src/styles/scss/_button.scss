@@ -1,0 +1,25 @@
+.container-button {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.button {
+    align-items: center;
+    background: linear-gradient(to right, #0249a1, #1e76a5, #0249a1);
+    background-size: cover;
+    font-family: "Delicious Handrawn";
+    align-items: center;
+    color: rgb(255 255 255);
+    font-size: 1.3rem;
+    padding: 0.5em 1em;
+    border-radius: 624rem;
+
+    @media only screen and (min-width: 430px) and (max-width: 599px) {
+        font-size: .95rem;
+    }
+
+    @media only screen and (max-width: 429px) {
+        font-size: .95rem;
+    }
+}

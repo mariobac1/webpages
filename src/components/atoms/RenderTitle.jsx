@@ -46,7 +46,12 @@ const RenderTitle = ({ value }) => {
 								<span className="icons material-icons-outlined">edit</span>
 							</button>
 						)}
-						<div>{card.description}</div>
+						<div
+							className={`${card.color}`}
+							style={{ color: card.color, fontFamily: card.details.font }}
+						>
+							{card.description}
+						</div>
 					</div>
 				))}
 		</article>

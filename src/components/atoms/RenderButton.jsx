@@ -17,8 +17,6 @@ const RenderButton = ({ value }) => {
 		setIDimage(name)
 	}
 
-	console.log(userData)
-
 	useEffect(() => {
 		axios
 			.get(`${API_URL}public/imagehome`)
@@ -50,12 +48,9 @@ const RenderButton = ({ value }) => {
 								<span className="icons material-icons-outlined">edit</span>
 							</button>
 						)}
-						<button
-							className="button"
-							onClick={() => changeData(card.id, card.name)}
-						>
+						<button className="button">
 							<span>{card.description}</span>
-							<span className="material-icons-outlined">
+							<span className="icon-inButton material-icons-outlined">
 								{card.details.icon}
 							</span>
 						</button>

@@ -1,0 +1,72 @@
+
+.container-Box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.container-infoBoxTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+	margin-top: -10rem;
+
+  @media only screen and (max-width: 1024px) {
+      margin-top: -8rem;
+  }
+}
+
+.container-Box1 {
+  flex: 1 1 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.75em;
+  padding-bottom: .75em;
+  border-radius: 0.5rem;
+  box-shadow:2px 2px 5px 0px rgba(128, 128, 128, 0.7);
+}
+
+.container-Box2 {
+  flex: 1 1 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.75em;
+  padding-bottom: .75em;
+  border-radius: 0.5rem;
+  box-shadow:2px 2px 5px 0px rgba(128, 128, 128, 0.7);
+}
+
+.container-Box3 {
+  flex: 1 1 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.75em;
+  padding-bottom: .75em;
+  border-radius: 0.5rem;
+  box-shadow:2px 2px 5px 0px rgba(128, 128, 128, 0.7);
+}
+
+.container-Box1 img {
+  width: 50%;
+  height: 50%;
+}
+
+.container-Box2 img {
+    width: 50%;
+    height: 50%;
+}
+
+.container-Box3 img {
+    width: 50%;
+    height: 50%;
+}

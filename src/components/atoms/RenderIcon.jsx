@@ -44,8 +44,12 @@ const RenderIcon = ({ value }) => {
 						<span className="material-symbols-outlined">
 							{card.details.icon}
 						</span>
-						<h5>{card.details.title}</h5>
-						<h6 style={{ color: card.color }}>{card.description}</h6>
+						<h5 className={`${card.color}`} style={{ color: card.color }}>
+							{card.details.title}
+						</h5>
+						<h6 className={`${card.color}`} style={{ color: card.color }}>
+							{card.description}
+						</h6>
 						<h6 style={{ color: card.color }}>{card.details.paragraph}</h6>
 						{userData && (
 							<button onClick={() => changeData(card.id, card.name)}>

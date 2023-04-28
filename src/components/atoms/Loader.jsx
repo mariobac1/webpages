@@ -1,7 +1,7 @@
 const Loader = () => (
-	<div className="">
-		<section className="">
-			<span className="">
+	<div>
+		<section>
+			<span>
 				<span className="material-symbols-outlined">autorenew</span>
 			</span>
 		</section>

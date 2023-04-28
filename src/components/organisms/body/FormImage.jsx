@@ -56,8 +56,8 @@ const FormImage = () => {
 	if (error) return <h1>{error?.message}</h1>
 
 	return (
-		<form className="" onSubmit={handleSubmit}>
-			<div>
+		<form className="formulary" onSubmit={handleSubmit}>
+			<div className="formulary-body">
 				<label htmlFor="nombre">Color:</label>
 				<input
 					type="text"
@@ -66,8 +66,6 @@ const FormImage = () => {
 					value={miJson.color}
 					onChange={handleInputChange}
 				/>
-			</div>
-			<div>
 				<label htmlFor="nombre">Descripción:</label>
 				<input
 					type="text"
@@ -76,26 +74,18 @@ const FormImage = () => {
 					value={miJson.description}
 					onChange={handleInputChange}
 				/>
-			</div>
-			<div>
 				<label htmlFor="file">Imagen:</label>
 				<input
 					type="file"
 					id="file"
 					name="file"
-					// className="block w-full text-sm text-slate-500
-					// file:mr-4 file:py-2 file:px-4
-					// file:rounded-full file:border-0
-					// file:text-sm file:font-semibold
-					// file:bg-violet-50 file:text-violet-700
-					// hover:file:bg-violet-100"
 					accept="image/jpeg,image/png,image/jpg"
 					onChange={handleFileChange}
 				/>
+				<p>{error && JSON.stringify(error)}</p>
+				{success && <p className="confirmation">{success}</p>}
+				<input type="submit" value="Enviar" />
 			</div>
-			<p>{error && JSON.stringify(error)}</p>
-			<p className="text-green-500">{success && success}</p>
-			<button type="submit">Enviar</button>
 		</form>
 	)
 }
