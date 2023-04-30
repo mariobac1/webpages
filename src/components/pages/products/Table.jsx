@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react"
 import axios from "axios"
 import { API_URL } from "../../../constants/env"
-import { token } from "../../../helpers/auth"
 import { Link } from "react-router-dom"
+import { token } from "../../../helpers/auth"
 
 const Table = () => {
 	const [product, setProduct] = useState([])
@@ -42,10 +42,10 @@ const Table = () => {
 		})
 	}, [product, search])
 
-	const deleteReserve = (product) => {
+	const deleteProduct = (product) => {
 		if (window.confirm("¿Estás seguro de eliminar?")) {
 			axios
-				.put(`${API_URL}private/product/${product.id}`, {
+				.delete(`${API_URL}private/product/${product.id}`, {
 					headers: {
 						Authorization: `Bearer ${token()}`,
 					},
@@ -102,7 +102,7 @@ const Table = () => {
 									<Link to={`/reservacion/editar/${product.id}`}>Editar</Link>
 								</td>
 								<td className="erase">
-									<a onClick={() => deleteReserve(product)}>🗑️</a>
+									<a onClick={() => deleteProduct(product)}>🗑️</a>
 								</td>
 							</tr>
 						))}
