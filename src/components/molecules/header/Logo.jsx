@@ -9,22 +9,32 @@ import { IMAGE_HOME_URL } from "../../../constants/env"
 import { Link } from "react-router-dom"
 
 const Logo = () => {
-	const { setIDimage, setShowEventModal, setHomeImageID, userData } =
-		useContext(GlobalContext)
+	const {
+		setShowEventLogo,
+		setNameForm,
+		setHomeImageID,
+		setColorForm,
+		setDescriptionForm,
+		setFontForm,
+		userData,
+	} = useContext(GlobalContext)
 	const [logo, setLogo] = useState()
 	const [route, setRoute] = useState()
 	const [error, setError] = useState()
 	const [loading, setLoading] = useState(true)
 
-	const changeData = (id, name) => {
-		setShowEventModal(true)
+	const changeData = (id, name, color, description, font) => {
+		setShowEventLogo(true)
 		setHomeImageID(id)
-		setIDimage(name)
+		setNameForm(name)
+		setColorForm(color)
+		setDescriptionForm(description)
+		setFontForm(font)
 	}
 
 	useEffect(() => {
 		axios
-			.get(`${API_URL}public/imagehome/${LOGO_ID}`, {
+			.get(`${API_URL}public/variablevalue/${LOGO_ID}`, {
 				headers: {
 					Authorization: `Bearer ${token()}`,
 				},
@@ -51,14 +61,31 @@ const Logo = () => {
 	return (
 		<div className="container-logoEdit">
 			{userData && (
-				<button onClick={() => changeData(logo.id, logo.name)}>
+				<button
+					onClick={() =>
+						changeData(
+							logo.id,
+							logo.name,
+							logo.color,
+							logo.description,
+							logo.font
+						)
+					}
+				>
 					<span className="icons material-icons-outlined">edit</span>
 				</button>
 			)}
 
 			<Link className="container-logo" to="/">
 				<img className="logo" src={route} alt="logo" />
-				<p className="brand" style={{ color: logo.color }}>
+				<p
+					className="brand"
+					style={{
+						color: logo.color,
+						fontFamily: logo.font,
+						background: logo.bgcolor,
+					}}
+				>
 					{logo && logo.description}
 				</p>
 			</Link>

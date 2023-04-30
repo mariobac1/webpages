@@ -1,16 +1,16 @@
 import { useContext } from "react"
-import GlobalContext from "../../contexts/GlobalContext"
-import FormImage from "./body/FormImage"
+import GlobalContext from "../../../contexts/GlobalContext"
+import FormLogo from "./FormLogo"
 
-const EventModal = () => {
-	const { IDimage, setShowEventModal } = useContext(GlobalContext)
+const EventLogo = () => {
+	const { nameForm, setShowEventLogo } = useContext(GlobalContext)
 
 	return (
 		<div className="container-window">
 			<div className="container-windowForm">
 				<div className="container-windowTop">
-					<p className="">Cambio de {IDimage}</p>
-					<button onClick={() => setShowEventModal(false)}>
+					<p style={{ color: "white" }}>Cambio de {nameForm}</p>
+					<button onClick={() => setShowEventLogo(false)}>
 						<span
 							className="material-icons-outlined"
 							style={{ color: "white" }}
@@ -19,10 +19,10 @@ const EventModal = () => {
 						</span>
 					</button>
 				</div>
-				<FormImage />
+				<FormLogo />
 			</div>
 		</div>
 	)
 }
 
-export default EventModal
+export default EventLogo

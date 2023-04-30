@@ -9,18 +9,29 @@ const RenderTitle = ({ value }) => {
 	const [card, setCard] = useState()
 	const [error, setError] = useState()
 	const [loading, setLoading] = useState(true)
-	const { setShowEventModal, setIDimage, setHomeImageID, userData } =
-		useContext(GlobalContext)
+	const {
+		setShowEventTitle,
+		showEventTitle,
+		setNameForm,
+		setHomeImageID,
+		setColorForm,
+		setDescriptionForm,
+		setFontForm,
+		userData,
+	} = useContext(GlobalContext)
 
-	const changeData = (id, name) => {
-		setShowEventModal(true)
+	const changeData = (id, name, color, description, font) => {
+		setShowEventTitle(true)
 		setHomeImageID(id)
-		setIDimage(name)
+		setNameForm(name)
+		setColorForm(color)
+		setDescriptionForm(description)
+		setFontForm(font)
 	}
-
+	console.log(showEventTitle)
 	useEffect(() => {
 		axios
-			.get(`${API_URL}public/imagehome`)
+			.get(`${API_URL}public/variablevalue`)
 			.then((resp) => {
 				setCard(resp.data.data)
 			})
@@ -42,13 +53,23 @@ const RenderTitle = ({ value }) => {
 				.map((card) => (
 					<div key={card.id} className="container-title">
 						{userData && (
-							<button onClick={() => changeData(card.id, card.name)}>
+							<button
+								onClick={() =>
+									changeData(
+										card.id,
+										card.name,
+										card.color,
+										card.description,
+										card.font
+									)
+								}
+							>
 								<span className="icons material-icons-outlined">edit</span>
 							</button>
 						)}
 						<div
 							className={`${card.color}`}
-							style={{ color: card.color, fontFamily: card.details.font }}
+							style={{ color: card.color, fontFamily: card.font }}
 						>
 							{card.description}
 						</div>

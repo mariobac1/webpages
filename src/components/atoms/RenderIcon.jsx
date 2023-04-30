@@ -8,18 +8,43 @@ const RenderIcon = ({ value }) => {
 	const [card, setCard] = useState()
 	const [error, setError] = useState()
 	const [loading, setLoading] = useState(true)
-	const { setShowEventModal, setIDimage, setHomeImageID, userData } =
-		useContext(GlobalContext)
+	const {
+		setShowEventFooter,
+		setNameForm,
+		setHomeImageID,
+		setColorForm,
+		setDescriptionForm,
+		setParagraphForm,
+		setIconForm,
+		setFontForm,
+		setTitleForm,
+		userData,
+	} = useContext(GlobalContext)
 
-	const changeData = (id, name) => {
-		setShowEventModal(true)
+	const changeData = (
+		id,
+		name,
+		color,
+		description,
+		paragraph,
+		icon,
+		font,
+		title
+	) => {
+		setShowEventFooter(true)
 		setHomeImageID(id)
-		setIDimage(name)
+		setNameForm(name)
+		setColorForm(color)
+		setDescriptionForm(description)
+		setParagraphForm(paragraph)
+		setIconForm(icon)
+		setFontForm(font)
+		setTitleForm(title)
 	}
 
 	useEffect(() => {
 		axios
-			.get(`${API_URL}public/imagehome`)
+			.get(`${API_URL}public/variablevalue`)
 			.then((resp) => {
 				setCard(resp.data.data)
 			})
@@ -41,18 +66,48 @@ const RenderIcon = ({ value }) => {
 				.sort((a, b) => a.name.localeCompare(b.name))
 				.map((card) => (
 					<div key={card.id} className="footer-info">
-						<span className="material-symbols-outlined">
-							{card.details.icon}
-						</span>
-						<h5 className={`${card.color}`} style={{ color: card.color }}>
-							{card.details.title}
+						<span className="material-symbols-outlined">{card.icon}</span>
+						<h5
+							className={`${card.color}`}
+							style={{
+								color: card.color,
+								fontFamily: card.font,
+							}}
+						>
+							{card.title}
 						</h5>
-						<h6 className={`${card.color}`} style={{ color: card.color }}>
+						<h6
+							className={`${card.color}`}
+							style={{
+								color: card.color,
+								fontFamily: card.font,
+							}}
+						>
 							{card.description}
 						</h6>
-						<h6 style={{ color: card.color }}>{card.details.paragraph}</h6>
+						<h6
+							style={{
+								color: card.color,
+								fontFamily: card.font,
+							}}
+						>
+							{card.paragraph}
+						</h6>
 						{userData && (
-							<button onClick={() => changeData(card.id, card.name)}>
+							<button
+								onClick={() =>
+									changeData(
+										card.id,
+										card.name,
+										card.color,
+										card.description,
+										card.paragraph,
+										card.icon,
+										card.font,
+										card.title
+									)
+								}
+							>
 								<span className="icons material-icons-outlined">edit</span>
 							</button>
 						)}

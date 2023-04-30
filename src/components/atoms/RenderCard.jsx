@@ -8,18 +8,30 @@ const RenderCard = ({ value }) => {
 	const [card, setCard] = useState()
 	const [error, setError] = useState()
 	const [loading, setLoading] = useState(true)
-	const { setShowEventModal, setIDimage, setHomeImageID, userData } =
-		useContext(GlobalContext)
+	const {
+		setShowEventBox,
+		setNameForm,
+		setHomeImageID,
+		setColorForm,
+		setDescriptionForm,
+		setFontForm,
+		setTitleForm,
+		userData,
+	} = useContext(GlobalContext)
 
-	const changeData = (id, name) => {
-		setShowEventModal(true)
+	const changeData = (id, name, color, description, font, title) => {
+		setShowEventBox(true)
 		setHomeImageID(id)
-		setIDimage(name)
+		setNameForm(name)
+		setColorForm(color)
+		setDescriptionForm(description)
+		setFontForm(font)
+		setTitleForm(title)
 	}
 
 	useEffect(() => {
 		axios
-			.get(`${API_URL}public/imagehome`)
+			.get(`${API_URL}public/variablevalue`)
 			.then((resp) => {
 				setCard(resp.data.data)
 			})
@@ -49,18 +61,29 @@ const RenderCard = ({ value }) => {
 						/>
 						<h4
 							className={`${card.color}`}
-							style={{ color: card.color, fontFamily: card.details.font }}
+							style={{ color: card.color, fontFamily: card.font }}
 						>
-							{card.details.title}
+							{card.title}
 						</h4>
 						<p
 							className={`${card.color}`}
-							style={{ color: card.color, fontFamily: card.details.font }}
+							style={{ color: card.color, fontFamily: card.font }}
 						>
 							{card.description}
 						</p>
 						{userData && (
-							<button onClick={() => changeData(card.id, card.name)}>
+							<button
+								onClick={() =>
+									changeData(
+										card.id,
+										card.name,
+										card.color,
+										card.description,
+										card.font,
+										card.title
+									)
+								}
+							>
 								<span className="icons material-icons-outlined">edit</span>
 							</button>
 						)}

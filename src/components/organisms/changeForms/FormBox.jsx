@@ -4,15 +4,15 @@ import { API_URL } from "../../../constants/env"
 import GlobalContext from "../../../contexts/GlobalContext"
 import { token } from "../../../helpers/auth"
 
-const FormImage = () => {
+const FormBox = () => {
 	const {
 		nameForm,
 		homeImageID,
 		colorForm,
 		descriptionForm,
-		bgColorForm,
+		titleForm,
 		fontForm,
-		setShowEventModal,
+		setShowEventBox,
 	} = useContext(GlobalContext)
 	const [error, setError] = useState()
 	const [success, setSuccess] = useState("")
@@ -21,7 +21,7 @@ const FormImage = () => {
 		color: colorForm,
 		description: descriptionForm,
 		file: null,
-		bgColor: bgColorForm,
+		title: titleForm,
 		font: fontForm,
 	})
 
@@ -42,7 +42,7 @@ const FormImage = () => {
 			description: miJson.description,
 			file: miJson.file,
 			font: miJson.font,
-			bgcolor: miJson.bgColor,
+			title: miJson.title,
 		}
 		console.log(data)
 		axios
@@ -55,7 +55,7 @@ const FormImage = () => {
 			.then(() => {
 				setSuccess("Guardado Exitosamente")
 				setTimeout(() => {
-					setShowEventModal(false)
+					setShowEventBox(false)
 				}, 800)
 			})
 			.catch((err) => {
@@ -68,20 +68,20 @@ const FormImage = () => {
 	return (
 		<form className="formulary" onSubmit={handleSubmit}>
 			<div className="formulary-body">
+				<label htmlFor="nombre">Título:</label>
+				<input
+					type="text"
+					id="title"
+					name="title"
+					value={miJson.title}
+					onChange={handleInputChange}
+				/>
 				<label htmlFor="nombre">Color de letra:</label>
 				<input
 					type="text"
 					id="color"
 					name="color"
 					value={miJson.color}
-					onChange={handleInputChange}
-				/>
-				<label htmlFor="nombre">Color de Fondo:</label>
-				<input
-					type="text"
-					id="bgColor"
-					name="bgColor"
-					value={miJson.bgColor}
 					onChange={handleInputChange}
 				/>
 				<label htmlFor="nombre">Fuente de texto:</label>
@@ -116,4 +116,4 @@ const FormImage = () => {
 	)
 }
 
-export default FormImage
+export default FormBox

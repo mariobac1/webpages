@@ -11,7 +11,7 @@ const RenderSocialNetwork = ({ value }) => {
 
 	useEffect(() => {
 		axios
-			.get(`${API_URL}public/imagehome`)
+			.get(`${API_URL}public/variablevalue`)
 			.then((resp) => {
 				setCard(resp.data.data)
 			})

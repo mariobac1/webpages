@@ -10,28 +10,28 @@ const FormImage = () => {
 		homeImageID,
 		colorForm,
 		descriptionForm,
-		bgColorForm,
+		titleForm,
 		fontForm,
+		paragraphForm,
+		iconForm,
 		setShowEventModal,
 	} = useContext(GlobalContext)
+
 	const [error, setError] = useState()
 	const [success, setSuccess] = useState("")
 	const [miJson, setMiJson] = useState({
 		name: nameForm,
 		color: colorForm,
 		description: descriptionForm,
-		file: null,
-		bgColor: bgColorForm,
+		title: titleForm,
 		font: fontForm,
+		paragraph: paragraphForm,
+		icon: iconForm,
 	})
 
 	const handleInputChange = (event) => {
 		const { name, value } = event.target
 		setMiJson({ ...miJson, [name]: value })
-	}
-
-	const handleFileChange = (event) => {
-		setMiJson({ ...miJson, file: event.target.files[0] })
 	}
 
 	const handleSubmit = (e) => {
@@ -40,9 +40,9 @@ const FormImage = () => {
 			name: miJson.name,
 			color: miJson.color,
 			description: miJson.description,
-			file: miJson.file,
 			font: miJson.font,
-			bgcolor: miJson.bgColor,
+			title: miJson.title,
+			icon: miJson.icon,
 		}
 		console.log(data)
 		axios
@@ -68,20 +68,20 @@ const FormImage = () => {
 	return (
 		<form className="formulary" onSubmit={handleSubmit}>
 			<div className="formulary-body">
+				<label htmlFor="nombre">Título:</label>
+				<input
+					type="text"
+					id="title"
+					name="title"
+					value={miJson.title}
+					onChange={handleInputChange}
+				/>
 				<label htmlFor="nombre">Color de letra:</label>
 				<input
 					type="text"
 					id="color"
 					name="color"
 					value={miJson.color}
-					onChange={handleInputChange}
-				/>
-				<label htmlFor="nombre">Color de Fondo:</label>
-				<input
-					type="text"
-					id="bgColor"
-					name="bgColor"
-					value={miJson.bgColor}
 					onChange={handleInputChange}
 				/>
 				<label htmlFor="nombre">Fuente de texto:</label>
@@ -92,7 +92,7 @@ const FormImage = () => {
 					value={miJson.font}
 					onChange={handleInputChange}
 				/>
-				<label htmlFor="nombre">Descripción:</label>
+				<label htmlFor="nombre">Frase 1:</label>
 				<input
 					type="text"
 					id="description"
@@ -100,13 +100,21 @@ const FormImage = () => {
 					value={miJson.description}
 					onChange={handleInputChange}
 				/>
-				<label htmlFor="file">Imagen:</label>
+				<label htmlFor="nombre">Frase 2:</label>
 				<input
-					type="file"
-					id="file"
-					name="file"
-					accept="image/jpeg,image/png,image/jpg"
-					onChange={handleFileChange}
+					type="text"
+					id="paragraph"
+					name="paragraph"
+					value={miJson.paragraph}
+					onChange={handleInputChange}
+				/>
+				<label htmlFor="nombre">Icono</label>
+				<input
+					type="text"
+					id="icon"
+					name="icon"
+					value={miJson.icon}
+					onChange={handleInputChange}
 				/>
 				<p>{error && JSON.stringify(error)}</p>
 				{success && <p className="confirmation">{success}</p>}

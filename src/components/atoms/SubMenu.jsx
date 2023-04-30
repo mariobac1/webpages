@@ -5,9 +5,7 @@ const SubMenu = ({ navi, text }) => {
 		<ul>
 			<li className="">
 				<Link className="" to={navi}>
-					<h4 className="">
-						{text}
-					</h4>
+					<h4 className="">{text}</h4>
 				</Link>
 			</li>
 		</ul>

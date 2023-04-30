@@ -11,8 +11,9 @@ const FormImage = () => {
 		colorForm,
 		descriptionForm,
 		bgColorForm,
+		iconForm,
 		fontForm,
-		setShowEventModal,
+		setShowEventButton,
 	} = useContext(GlobalContext)
 	const [error, setError] = useState()
 	const [success, setSuccess] = useState("")
@@ -20,8 +21,8 @@ const FormImage = () => {
 		name: nameForm,
 		color: colorForm,
 		description: descriptionForm,
-		file: null,
 		bgColor: bgColorForm,
+		icon: iconForm,
 		font: fontForm,
 	})
 
@@ -30,21 +31,16 @@ const FormImage = () => {
 		setMiJson({ ...miJson, [name]: value })
 	}
 
-	const handleFileChange = (event) => {
-		setMiJson({ ...miJson, file: event.target.files[0] })
-	}
-
 	const handleSubmit = (e) => {
 		e.preventDefault()
 		const data = {
 			name: miJson.name,
 			color: miJson.color,
 			description: miJson.description,
-			file: miJson.file,
 			font: miJson.font,
+			icon: miJson.icon,
 			bgcolor: miJson.bgColor,
 		}
-		console.log(data)
 		axios
 			.put(`${API_URL}private/variablevalue/${homeImageID}`, data, {
 				headers: {
@@ -55,7 +51,7 @@ const FormImage = () => {
 			.then(() => {
 				setSuccess("Guardado Exitosamente")
 				setTimeout(() => {
-					setShowEventModal(false)
+					setShowEventButton(false)
 				}, 800)
 			})
 			.catch((err) => {
@@ -92,6 +88,7 @@ const FormImage = () => {
 					value={miJson.font}
 					onChange={handleInputChange}
 				/>
+
 				<label htmlFor="nombre">Descripción:</label>
 				<input
 					type="text"
@@ -100,13 +97,13 @@ const FormImage = () => {
 					value={miJson.description}
 					onChange={handleInputChange}
 				/>
-				<label htmlFor="file">Imagen:</label>
+				<label htmlFor="nombre">Icono:</label>
 				<input
-					type="file"
-					id="file"
-					name="file"
-					accept="image/jpeg,image/png,image/jpg"
-					onChange={handleFileChange}
+					type="text"
+					id="icon"
+					name="icon"
+					value={miJson.icon}
+					onChange={handleInputChange}
 				/>
 				<p>{error && JSON.stringify(error)}</p>
 				{success && <p className="confirmation">{success}</p>}

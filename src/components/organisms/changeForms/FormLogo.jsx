@@ -4,15 +4,14 @@ import { API_URL } from "../../../constants/env"
 import GlobalContext from "../../../contexts/GlobalContext"
 import { token } from "../../../helpers/auth"
 
-const FormImage = () => {
+const FormLogo = () => {
 	const {
 		nameForm,
 		homeImageID,
 		colorForm,
 		descriptionForm,
-		bgColorForm,
 		fontForm,
-		setShowEventModal,
+		setShowEventLogo,
 	} = useContext(GlobalContext)
 	const [error, setError] = useState()
 	const [success, setSuccess] = useState("")
@@ -21,7 +20,6 @@ const FormImage = () => {
 		color: colorForm,
 		description: descriptionForm,
 		file: null,
-		bgColor: bgColorForm,
 		font: fontForm,
 	})
 
@@ -42,9 +40,7 @@ const FormImage = () => {
 			description: miJson.description,
 			file: miJson.file,
 			font: miJson.font,
-			bgcolor: miJson.bgColor,
 		}
-		console.log(data)
 		axios
 			.put(`${API_URL}private/variablevalue/${homeImageID}`, data, {
 				headers: {
@@ -55,7 +51,7 @@ const FormImage = () => {
 			.then(() => {
 				setSuccess("Guardado Exitosamente")
 				setTimeout(() => {
-					setShowEventModal(false)
+					setShowEventLogo(false)
 				}, 800)
 			})
 			.catch((err) => {
@@ -76,14 +72,6 @@ const FormImage = () => {
 					value={miJson.color}
 					onChange={handleInputChange}
 				/>
-				<label htmlFor="nombre">Color de Fondo:</label>
-				<input
-					type="text"
-					id="bgColor"
-					name="bgColor"
-					value={miJson.bgColor}
-					onChange={handleInputChange}
-				/>
 				<label htmlFor="nombre">Fuente de texto:</label>
 				<input
 					type="text"
@@ -92,7 +80,7 @@ const FormImage = () => {
 					value={miJson.font}
 					onChange={handleInputChange}
 				/>
-				<label htmlFor="nombre">Descripción:</label>
+				<label htmlFor="nombre">Nombre de la empresa:</label>
 				<input
 					type="text"
 					id="description"
@@ -116,4 +104,4 @@ const FormImage = () => {
 	)
 }
 
-export default FormImage
+export default FormLogo
