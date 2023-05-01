@@ -14,7 +14,6 @@ const RenderTitle = ({ value }) => {
 
 	const {
 		setShowEventTitle,
-		showEventTitle,
 		setNameForm,
 		setHomeImageID,
 		setColorForm,
@@ -31,7 +30,6 @@ const RenderTitle = ({ value }) => {
 		setDescriptionForm(description)
 		setFontForm(font)
 	}
-	console.log(showEventTitle)
 	useEffect(() => {
 		axios
 			.get(`${API_URL}public/variablevalue`)

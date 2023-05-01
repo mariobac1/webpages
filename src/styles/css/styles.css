@@ -385,8 +385,9 @@ header {
 
 .container-subMenu {
   position: absolute;
-  margin-top: 2.9rem;
-  width: 50%;
+  left: 44%;
+  margin-top: 1.5rem;
+  width: 20rem;
   right: 0.125rem;
   background-color: rgb(255, 255, 255);
   border-radius: 0.5rem;
@@ -402,14 +403,13 @@ header {
   border-radius: 0.5rem;
 }
 .container-subMenu div {
-  margin: 0.25rem 0;
-  border-bottom: 2px solid rgba(102, 107, 118, 0.25);
+  margin: 0 0;
   text-align: center;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid rgba(102, 107, 118, 0.25);
 }
 .container-subMenu .a_item_menu {
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
   color: rgb(102, 107, 118);
   font-family: "Acme";
 }
@@ -424,6 +424,50 @@ header {
   font-weight: 600;
 }
 .container-subMenu div:last-child {
+  border-bottom: none;
+}
+
+.container-subMenuHamburguer {
+  position: absolute;
+  margin-top: 2.9rem;
+  width: 50%;
+  right: 0.125rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+  visibility: visible;
+}
+.container-subMenuHamburguer ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  color: rgb(243, 244, 246);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+}
+.container-subMenuHamburguer div {
+  margin: 0.25rem 0;
+  border-bottom: 2px solid rgba(102, 107, 118, 0.25);
+  text-align: center;
+}
+.container-subMenuHamburguer .a_item_menu {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(102, 107, 118);
+  font-family: "Acme";
+}
+.container-subMenuHamburguer .a_item_menu:hover {
+  font-weight: 600;
+  font-size: 1.75rem;
+}
+.container-subMenuHamburguer .a_item_menu:focus {
+  font-weight: 600;
+}
+.container-subMenuHamburguer .a_item_menu:active {
+  font-weight: 600;
+}
+.container-subMenuHamburguer div:last-child {
   border-bottom: none;
 }
 

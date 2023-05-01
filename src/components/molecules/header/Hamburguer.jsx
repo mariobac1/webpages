@@ -33,10 +33,10 @@ const HamburguerMenu = () => {
 			</div>
 			<div
 				className={` ${
-					!openMenu ? "container-subMenuHidden" : "container-subMenu"
+					!openMenu ? "container-subMenuHidden" : "container-subMenuHamburguer"
 				}`}
 			>
-				<ul className="flex flex-col justify-end text-2xl text-gray-100 font divide-y shadow-2xl radius-lg">
+				<ul>
 					<div
 						onClick={() => {
 							setOpenMenu(!openMenu)
