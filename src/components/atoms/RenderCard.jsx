@@ -3,11 +3,14 @@ import GlobalContext from "../../contexts/GlobalContext"
 import axios from "axios"
 import { API_URL, IMAGE_HOME_URL } from "../../constants/env"
 import Loader from "./Loader"
+import { useLocation } from "react-router-dom"
 
 const RenderCard = ({ value }) => {
 	const [card, setCard] = useState()
 	const [error, setError] = useState()
 	const [loading, setLoading] = useState(true)
+	const location = useLocation()
+
 	const {
 		setShowEventBox,
 		setNameForm,
@@ -71,7 +74,7 @@ const RenderCard = ({ value }) => {
 						>
 							{card.description}
 						</p>
-						{userData && (
+						{location.pathname === "/" && userData && (
 							<button
 								onClick={() =>
 									changeData(

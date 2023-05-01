@@ -4,11 +4,14 @@ import axios from "axios"
 import { API_URL } from "../../constants/env"
 import Loader from "./Loader"
 import GlobalContext from "../../contexts/GlobalContext"
+import { useLocation } from "react-router-dom"
 
 const RenderTitle = ({ value }) => {
 	const [card, setCard] = useState()
 	const [error, setError] = useState()
 	const [loading, setLoading] = useState(true)
+	const location = useLocation()
+
 	const {
 		setShowEventTitle,
 		showEventTitle,
@@ -52,7 +55,7 @@ const RenderTitle = ({ value }) => {
 				.filter((card) => card.name.includes(value))
 				.map((card) => (
 					<div key={card.id} className="container-title">
-						{userData && (
+						{location.pathname === "/" && userData && (
 							<button
 								onClick={() =>
 									changeData(

@@ -2,8 +2,8 @@ import { Link } from "react-router-dom"
 
 const ItemMenu = ({ navi, text }) => {
 	return (
-		<li className="">
-			<Link className="" to={navi}>
+		<li>
+			<Link className="a_item_menu" to={navi}>
 				{text}
 			</Link>
 		</li>

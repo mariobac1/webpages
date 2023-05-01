@@ -3,11 +3,14 @@ import GlobalContext from "../../contexts/GlobalContext"
 import axios from "axios"
 import { API_URL } from "../../constants/env"
 import Loader from "./Loader"
+import { useLocation } from "react-router-dom"
 
 const RenderButton = ({ value }) => {
 	const [card, setCard] = useState()
 	const [error, setError] = useState()
 	const [loading, setLoading] = useState(true)
+	const location = useLocation()
+
 	const {
 		setShowEventButton,
 		setNameForm,
@@ -54,7 +57,7 @@ const RenderButton = ({ value }) => {
 				.filter((card) => card.name.includes(value))
 				.map((card) => (
 					<div key={card.id} className="container-button">
-						{userData && (
+						{location.pathname === "/" && userData && (
 							<button
 								className=""
 								onClick={() =>
