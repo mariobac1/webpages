@@ -6,7 +6,7 @@ import { token } from "../../../helpers/auth"
 import Loader from "../../atoms/Loader"
 import { LOGO_ID } from "../../../constants/env"
 import { IMAGE_HOME_URL } from "../../../constants/env"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 
 const Logo = () => {
 	const {
@@ -16,20 +16,23 @@ const Logo = () => {
 		setColorForm,
 		setDescriptionForm,
 		setFontForm,
+		setParagraphForm,
 		userData,
 	} = useContext(GlobalContext)
 	const [logo, setLogo] = useState()
 	const [route, setRoute] = useState()
 	const [error, setError] = useState()
 	const [loading, setLoading] = useState(true)
+	const location = useLocation()
 
-	const changeData = (id, name, color, description, font) => {
+	const changeData = (id, name, color, description, font, paragraph) => {
 		setShowEventLogo(true)
 		setHomeImageID(id)
 		setNameForm(name)
 		setColorForm(color)
 		setDescriptionForm(description)
 		setFontForm(font)
+		setParagraphForm(paragraph)
 	}
 
 	useEffect(() => {
@@ -60,7 +63,7 @@ const Logo = () => {
 
 	return (
 		<div className="container-logoEdit">
-			{userData && (
+			{location.pathname === "/" && userData && (
 				<button
 					onClick={() =>
 						changeData(
@@ -68,7 +71,8 @@ const Logo = () => {
 							logo.name,
 							logo.color,
 							logo.description,
-							logo.font
+							logo.font,
+							logo.paragraph
 						)
 					}
 				>
@@ -84,6 +88,7 @@ const Logo = () => {
 						color: logo.color,
 						fontFamily: logo.font,
 						background: logo.bgcolor,
+						fontSize: logo.paragraph,
 					}}
 				>
 					{logo && logo.description}

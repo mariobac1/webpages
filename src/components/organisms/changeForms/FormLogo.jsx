@@ -11,6 +11,7 @@ const FormLogo = () => {
 		colorForm,
 		descriptionForm,
 		fontForm,
+		paragraphForm,
 		setShowEventLogo,
 	} = useContext(GlobalContext)
 	const [error, setError] = useState()
@@ -21,6 +22,7 @@ const FormLogo = () => {
 		description: descriptionForm,
 		file: null,
 		font: fontForm,
+		paragraph: paragraphForm,
 	})
 
 	const handleInputChange = (event) => {
@@ -40,6 +42,7 @@ const FormLogo = () => {
 			description: miJson.description,
 			file: miJson.file,
 			font: miJson.font,
+			paragraph: miJson.paragraph,
 		}
 		axios
 			.put(`${API_URL}private/variablevalue/${homeImageID}`, data, {
@@ -78,6 +81,14 @@ const FormLogo = () => {
 					id="font"
 					name="font"
 					value={miJson.font}
+					onChange={handleInputChange}
+				/>
+				<label htmlFor="nombre">Tamaño de texto:</label>
+				<input
+					type="text"
+					id="paragraph"
+					name="paragraph"
+					value={miJson.paragraph}
 					onChange={handleInputChange}
 				/>
 				<label htmlFor="nombre">Nombre de la empresa:</label>
