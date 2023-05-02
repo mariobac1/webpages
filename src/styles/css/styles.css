@@ -374,6 +374,10 @@ header {
   width: 3.5rem;
 }
 
+.selector {
+  cursor: pointer;
+}
+
 .container-hamburguer {
   color: white;
   padding: 0 0.25rem;

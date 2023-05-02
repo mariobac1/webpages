@@ -10,6 +10,7 @@ import EventTitle from "../organisms/changeForms/EventTitle"
 import EventFooter from "../organisms/changeForms/EventFooter"
 import EventLogo from "../organisms/changeForms/EventLogo"
 import EventBox from "../organisms/changeForms/EventBox"
+import EventSocialNetwork from "../organisms/changeForms/EventSocialNetwork"
 
 const Home = () => {
 	const {
@@ -19,6 +20,7 @@ const Home = () => {
 		showEventFooter,
 		showEventLogo,
 		showEventBox,
+		showEventSocialNetwork,
 	} = useContext(GlobalContext)
 
 	return (
@@ -29,6 +31,7 @@ const Home = () => {
 			{showEventFooter && <EventFooter />}
 			{showEventLogo && <EventLogo />}
 			{showEventBox && <EventBox />}
+			{showEventSocialNetwork && <EventSocialNetwork />}
 
 			<div className="container-homeBody">
 				<Slogan />

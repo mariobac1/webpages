@@ -1,5 +1,5 @@
 import FooterInfo from "../../molecules/footer/FooterInfo"
-import SocialNetworkGray from "../../molecules/header/SocialNetworkGray"
+import SocialNetworkGray from "../../molecules/footer/SocialNetworkGray"
 
 const MainFooter = () => {
 	return (

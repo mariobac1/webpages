@@ -3,10 +3,15 @@ import HamburguerMenu from "./Hamburguer"
 import { useContext, useEffect, useState } from "react"
 import GlobalContext from "../../../contexts/GlobalContext"
 import ItemMenu from "../../atoms/ItemMenu"
+import { deleteToken } from "../../../helpers/auth"
 
 const MainMenu = () => {
-	const userData = useContext(GlobalContext)
+	const { userData, setUserData } = useContext(GlobalContext)
 	const [openMenu, setOpenMenu] = useState(false)
+	const logout = () => {
+		deleteToken()
+		setUserData()
+	}
 
 	const handleDocumentClick = (e) => {
 		const menu = document.querySelector(".container-mainMenu")
@@ -84,6 +89,18 @@ const MainMenu = () => {
 					<Link to="/contact">QUIENES SOMOS</Link>
 				</li>
 			</ul>
+			{userData && (
+				<button onClick={() => logout()}>
+					<span
+						className="logout material-icons-outlined"
+						style={{
+							color: "white",
+						}}
+					>
+						logout
+					</span>
+				</button>
+			)}
 			<div className="hamburguerMenu">
 				<HamburguerMenu />
 			</div>

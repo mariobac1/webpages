@@ -11,6 +11,7 @@ const ContextWrapper = ({ children }) => {
 	const [showEventLogo, setShowEventLogo] = useState(false)
 	const [showEventBox, setShowEventBox] = useState(false)
 	const [showEventFooter, setShowEventFooter] = useState(false)
+	const [showEventSocialNetwork, setShowEventSocialNetwork] = useState(false)
 	const [IDimage, setIDimage] = useState("")
 	const [nameForm, setNameForm] = useState("")
 	const [descriptionForm, setDescriptionForm] = useState("")
@@ -52,6 +53,8 @@ const ContextWrapper = ({ children }) => {
 				setShowEventBox,
 				showEventFooter,
 				setShowEventFooter,
+				showEventSocialNetwork,
+				setShowEventSocialNetwork,
 				IDimage,
 				setIDimage,
 				homeImageID,

@@ -15,6 +15,8 @@ const GlobalContext = createContext({
 	setShowEventBox: () => {},
 	showEventFooter: false,
 	setShowEventFooter: () => {},
+	showEventSocialNetwork: false,
+	setShowEventSocialNetwork: () => {},
 	showEventTitle: false,
 	setShowEventTitle: () => {},
 	imageLogo: null,
