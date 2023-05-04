@@ -1,0 +1,96 @@
+.container-titleDisplayProducts{
+  display: flex;
+  justify-content: center;
+  color: #1e76a5;
+  margin-bottom: 1.5rem;
+}
+
+.containers-product {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  margin-bottom: 5rem;
+}
+
+.article-product {
+  width: 100%;
+  background-color: #fff;
+  border-radius: .5rem;
+  box-shadow:2px 2px 5px 0px rgba(128, 128, 128, 0.7);
+  padding: 1.25;
+}
+
+.container-imageProduct {
+  margin: 1.25rem auto;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  width: 95%;
+
+  img {
+    vertical-align: middle;
+    height: 15rem;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.container-infoProduct {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  margin:0 auto 1.5rem auto;
+
+
+  h2 {
+    color: #0249a1;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    margin-bottom: 0.5rem;
+    margin: 0 auto 0.5rem auto;
+  }
+
+  h3 {
+    align-items: center;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+    color: #0249a1;
+    margin: 0 auto 0 auto;
+  }
+
+  p {
+    color: rgb(107 114 128);
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin: 0 auto 0 auto;
+    text-align: center;
+  }
+}
+
+.article-product {
+  transition: all 0.3s ease-in-out; /* Define una transición suave para todas las propiedades CSS */
+  }
+
+.article-product:hover {
+transform: scale(1.01); /* Aumenta el tamaño de la etiqueta article en un 10% */
+}
+
+.article-product:hover img {
+transform: scale(1.02); /* Aumenta el tamaño de la imagen en un 20% */
+}
+
+.article-product:hover h2 {
+font-size: 2.2rem; /* Aumenta el tamaño de la fuente del título en 0.2rem */
+}
+
+.article-product:hover h3 {
+font-size: 1.8rem; /* Aumenta el tamaño de la fuente del precio en 0.2rem */
+}
+
+.article-product:hover p {
+font-size: 1.2rem; /* Aumenta el tamaño de la fuente de la descripción en 0.2rem */
+}

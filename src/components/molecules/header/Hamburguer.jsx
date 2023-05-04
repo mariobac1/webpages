@@ -32,31 +32,31 @@ const HamburguerMenu = () => {
 				</div>
 			</div>
 			<div
-				className={`absolute mt-1 right-0.5 bg-white    ${
-					!openMenu ? "hidden" : "visible"
+				className={` ${
+					!openMenu ? "container-subMenuHidden" : "container-subMenuHamburguer"
 				}`}
 			>
-				<ul className="flex flex-col justify-end text-gray-100 divide-y shadow-2xl radius-lg">
+				<ul>
 					<div
 						onClick={() => {
 							setOpenMenu(!openMenu)
 						}}
 					>
-						<ItemMenu navi={"/"} text={"Inicio"} />
+						<ItemMenu navi={"/"} text={"INICIO"} />
 					</div>
 					<div
 						onClick={() => {
 							setOpenMenu(!openMenu)
 						}}
 					>
-						<ItemMenu navi={"/producto"} text={"Productos"} />
+						<ItemMenu navi={"/producto"} text={"PRODUCTOS"} />
 					</div>
 					<div
 						onClick={() => {
 							setOpenMenu(!openMenu)
 						}}
 					>
-						<ItemMenu navi={"/contacto"} text={"Contacto"} />
+						<ItemMenu navi={"/sobrenosotros"} text={"QUIENES SOMOS"} />
 					</div>
 				</ul>
 			</div>

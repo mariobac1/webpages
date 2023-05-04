@@ -1,18 +1,28 @@
 import axios from "axios"
 import { useContext, useState } from "react"
-import { API_URL } from "../../constants/env"
-import GlobalContext from "../../contexts/GlobalContext"
-import { token } from "../../helpers/auth"
+import { API_URL } from "../../../constants/env"
+import GlobalContext from "../../../contexts/GlobalContext"
+import { token } from "../../../helpers/auth"
 
-const FormImage = () => {
-	const { IDimage, homeImageID, setShowEventModal } = useContext(GlobalContext)
+const FormBox = () => {
+	const {
+		nameForm,
+		homeImageID,
+		colorForm,
+		descriptionForm,
+		titleForm,
+		fontForm,
+		setShowEventBox,
+	} = useContext(GlobalContext)
 	const [error, setError] = useState()
 	const [success, setSuccess] = useState("")
 	const [miJson, setMiJson] = useState({
-		name: "IDimage",
-		color: "",
-		description: "",
+		name: nameForm,
+		color: colorForm,
+		description: descriptionForm,
 		file: null,
+		title: titleForm,
+		font: fontForm,
 	})
 
 	const handleInputChange = (event) => {
@@ -26,17 +36,17 @@ const FormImage = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault()
-		miJson.name = IDimage
 		const data = {
 			name: miJson.name,
 			color: miJson.color,
 			description: miJson.description,
 			file: miJson.file,
+			font: miJson.font,
+			title: miJson.title,
 		}
 		console.log(data)
-		console.log(homeImageID)
 		axios
-			.put(`${API_URL}private/imagehome/${homeImageID}`, data, {
+			.put(`${API_URL}private/variablevalue/${homeImageID}`, data, {
 				headers: {
 					Authorization: `Bearer ${token()}`,
 					"Content-Type": "multipart/form-data",
@@ -45,7 +55,7 @@ const FormImage = () => {
 			.then(() => {
 				setSuccess("Guardado Exitosamente")
 				setTimeout(() => {
-					setShowEventModal(false)
+					setShowEventBox(false)
 				}, 800)
 			})
 			.catch((err) => {
@@ -56,9 +66,17 @@ const FormImage = () => {
 	if (error) return <h1>{error?.message}</h1>
 
 	return (
-		<form className="w-full rounded-lg shadow-2xl" onSubmit={handleSubmit}>
-			<div>
-				<label htmlFor="nombre">Color:</label>
+		<form className="formulary" onSubmit={handleSubmit}>
+			<div className="formulary-body">
+				<label htmlFor="nombre">Título:</label>
+				<input
+					type="text"
+					id="title"
+					name="title"
+					value={miJson.title}
+					onChange={handleInputChange}
+				/>
+				<label htmlFor="nombre">Color de letra:</label>
 				<input
 					type="text"
 					id="color"
@@ -66,8 +84,14 @@ const FormImage = () => {
 					value={miJson.color}
 					onChange={handleInputChange}
 				/>
-			</div>
-			<div>
+				<label htmlFor="nombre">Fuente de texto:</label>
+				<input
+					type="text"
+					id="font"
+					name="font"
+					value={miJson.font}
+					onChange={handleInputChange}
+				/>
 				<label htmlFor="nombre">Descripción:</label>
 				<input
 					type="text"
@@ -76,28 +100,20 @@ const FormImage = () => {
 					value={miJson.description}
 					onChange={handleInputChange}
 				/>
-			</div>
-			<div>
 				<label htmlFor="file">Imagen:</label>
 				<input
 					type="file"
 					id="file"
 					name="file"
-					className="block w-full text-sm text-slate-500
-					file:mr-4 file:py-2 file:px-4
-					file:rounded-full file:border-0
-					file:text-sm file:font-semibold
-					file:bg-violet-50 file:text-violet-700
-					hover:file:bg-violet-100"
 					accept="image/jpeg,image/png,image/jpg"
 					onChange={handleFileChange}
 				/>
+				<p>{error && JSON.stringify(error)}</p>
+				{success && <p className="confirmation">{success}</p>}
+				<input type="submit" value="Enviar" />
 			</div>
-			<p>{error && JSON.stringify(error)}</p>
-			<p className="text-green-500">{success && success}</p>
-			<button type="submit">Enviar</button>
 		</form>
 	)
 }
 
-export default FormImage
+export default FormBox

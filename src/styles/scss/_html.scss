@@ -1,0 +1,220 @@
+$fonts_titles: 'Acme', sans-serif;
+
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: 4em 1fr 4em;
+}
+
+div {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    width: 100%;
+}
+
+h1 {
+  font-size: 4.5rem;
+  font-family: $fonts_titles;
+  margin: 0;
+  padding: 0;
+
+  @media screen and (min-width: 1025px) and (max-width: 1440px) {
+      font-size: 3.3rem;
+  }
+
+  @media screen and (min-width: 800px) and (max-width: 1024px) {
+      font-size: 2.5rem;
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 799px) {
+      font-size: 1.85rem;
+  }
+
+  @media screen and (min-width: 430px) and (max-width: 599px) {
+      font-size: 1.35rem;
+  }
+  @media only screen and (max-width: 429px) {
+      font-size: 1.35rem;
+  }
+}
+
+h2 {
+  font-size: 4.25rem;
+  font-family: $fonts_titles;
+
+  @media screen and (min-width: 1025px) and (max-width: 1440px) {
+      font-size: 3.25rem;
+  }
+  @media screen and (min-width: 800px) and (max-width: 1024px) {
+      font-size: 2.25rem;
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 799px) {
+      font-size: 1.65rem;
+  }
+
+  @media screen and (min-width: 430px) and (max-width: 599px) {
+      font-size: 1.25rem;
+  }
+  @media only screen and (max-width: 429px) {
+      font-size: 1.25rem;
+  }
+}
+
+h3 {
+  font-size: 4.15rem;
+  font-family: $fonts_titles;
+  margin: 0;
+  padding: 0;
+
+  @media screen and (min-width: 1025px) and (max-width: 1440px) {
+      font-size: 2.75rem;
+  }
+  @media screen and (min-width: 800px) and (max-width: 1024px) {
+      font-size: 2rem;
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 799px) {
+      font-size: 1.5rem;
+  }
+
+  @media screen and (min-width: 430px) and (max-width: 599px) {
+      font-size: 1rem;
+  }
+
+  @media only screen and (max-width: 429px) {
+      font-size: 1rem;
+  }
+}
+
+h4 {
+  font-size: 3.15rem;
+  font-family: $fonts_titles;
+  margin: 0;
+  padding: 0;
+
+  @media screen and (min-width: 1025px) and (max-width: 1440px) {
+      font-size: 1.75rem;
+  }
+
+  @media screen and (min-width: 800px) and (max-width: 1024px) {
+      font-size: 1.35rem;
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 799px) {
+      font-size: 1.35rem;
+  }
+
+  @media screen and (min-width: 430px) and (max-width: 599px) {
+      font-size: 1rem;
+  }
+
+  @media only screen and (max-width: 429px) {
+      font-size: 1rem;
+  }
+}
+
+h5 {
+  font-size: 2rem;
+  font-family: "Georgia", "sans-serif";
+  margin: 0;
+  padding: 0;
+
+  @media screen and (min-width: 1025px) and (max-width: 1440px) {
+      font-size: 1.5rem;
+  }
+
+  @media screen and (min-width: 800px) and (max-width: 1024px) {
+      font-size: 1.25rem;
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 799px) {
+      font-size: .85rem;
+  }
+
+  @media screen and (min-width: 430px) and (max-width: 599px) {
+      font-size: .85rem;
+  }
+
+  @media only screen and (max-width: 429px) {
+      font-size: .75rem;
+  }
+}
+
+h6 {
+  font-size: .75rem;
+}
+
+p {
+  font-size: 2rem;
+  font-family: "Acme", 'Courier New', Courier, monospace;
+
+  @media screen and (min-width: 1025px) and (max-width: 1440px) {
+      font-size: 1.3rem;
+  }
+
+  @media screen and (min-width: 800px) and (max-width: 1024px) {
+      font-size: 1.15rem;
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 799px) {
+      font-size: 0.9rem;
+  }
+
+  @media screen and (min-width: 430px) and (max-width: 599px) {
+      font-size: 0.9rem;
+  }
+
+  @media only screen and (max-width: 429px) {
+      font-size: .9rem;
+  }
+}
+
+ul {
+  list-style:none;
+}
+
+li {
+  list-style:none;
+  font-family: "Delicious Handrawn", "Times New Roman", "Times", "serif";
+  color: #fff;
+  font-size: 1.3rem;
+  padding: 0 2.5vw;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.background-text {
+  background: linear-gradient(to right, #012959, #0249a1, #1e76a5, #0249a1, #012959);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll;
+}

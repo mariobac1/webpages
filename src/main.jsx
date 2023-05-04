@@ -4,7 +4,7 @@ import { RouterProvider } from "react-router-dom"
 import ContextWrapper from "./contexts/ContextWrapper"
 import { UserProvider } from "./contexts/UserContext"
 import router from "./router/Router"
-import "./styles/index.css"
+import "./styles/css/styles.css"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<UserProvider>

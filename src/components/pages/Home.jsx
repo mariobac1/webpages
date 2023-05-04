@@ -1,40 +1,45 @@
 import { useContext } from "react"
 import GlobalContext from "../../contexts/GlobalContext"
-import EventModal from "../organisms/EventModal"
-import Slogan from "../organisms/Slogan"
-import ImageVertical2 from "../molecules/body/ImageVertical2"
-import ImageVertical1 from "../molecules/body/ImageVertical1"
-import ImageHorizontal1 from "../molecules/body/ImageHorizontal1"
-import ImageHorizontal2 from "../molecules/body/ImageHorizontal2"
-import InfoBox from "../organisms/InfoBox"
+import Slogan from "../organisms/body/Slogan"
+import InfoBox from "../organisms/body/InfoBox"
+import ImageVertical from "../molecules/body/ImageVertical"
+import ImageHorizontal from "../molecules/body/ImageHorizontal"
+import EventModal from "../organisms/changeForms/EventModal"
+import EventButton from "../organisms/changeForms/EventButton"
+import EventTitle from "../organisms/changeForms/EventTitle"
+import EventFooter from "../organisms/changeForms/EventFooter"
+import EventLogo from "../organisms/changeForms/EventLogo"
+import EventBox from "../organisms/changeForms/EventBox"
+import EventSocialNetwork from "../organisms/changeForms/EventSocialNetwork"
 
 const Home = () => {
-	const { showEventModal } = useContext(GlobalContext)
+	const {
+		showEventModal,
+		showEventButton,
+		showEventTitle,
+		showEventFooter,
+		showEventLogo,
+		showEventBox,
+		showEventSocialNetwork,
+	} = useContext(GlobalContext)
 
 	return (
-		<div className="container-main">
+		<div>
 			{showEventModal && <EventModal />}
-			<Slogan />
-			<div>
-				<div className="container-body-mdOrUpper">
-					<ImageVertical1 />
-					<ImageVertical2 />
-					<div className="container-horizontal-Total">
-						<ImageHorizontal1 />
-						<ImageHorizontal2 />
-					</div>
+			{showEventButton && <EventButton />}
+			{showEventTitle && <EventTitle />}
+			{showEventFooter && <EventFooter />}
+			{showEventLogo && <EventLogo />}
+			{showEventBox && <EventBox />}
+			{showEventSocialNetwork && <EventSocialNetwork />}
+
+			<div className="container-homeBody">
+				<Slogan />
+				<div className="container-images">
+					<ImageVertical />
+					<ImageHorizontal />
 				</div>
 				<InfoBox />
-			</div>
-			<div className="container-body-mdOrLower">
-				<div className="flex w-full">
-					<ImageVertical1 />
-					<ImageVertical2 />
-				</div>
-				<div className="">
-					<ImageHorizontal1 />
-					<ImageHorizontal2 />
-				</div>
 			</div>
 		</div>
 	)

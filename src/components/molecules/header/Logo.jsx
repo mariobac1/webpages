@@ -6,22 +6,38 @@ import { token } from "../../../helpers/auth"
 import Loader from "../../atoms/Loader"
 import { LOGO_ID } from "../../../constants/env"
 import { IMAGE_HOME_URL } from "../../../constants/env"
+import { Link, useLocation } from "react-router-dom"
 
 const Logo = () => {
-	const { setIDimage, setShowEventModal } = useContext(GlobalContext)
+	const {
+		setShowEventLogo,
+		setNameForm,
+		setHomeImageID,
+		setColorForm,
+		setDescriptionForm,
+		setFontForm,
+		setParagraphForm,
+		userData,
+	} = useContext(GlobalContext)
 	const [logo, setLogo] = useState()
 	const [route, setRoute] = useState()
 	const [error, setError] = useState()
 	const [loading, setLoading] = useState(true)
+	const location = useLocation()
 
-	const changeData = () => {
-		setShowEventModal(true)
-		setIDimage("logo")
+	const changeData = (id, name, color, description, font, paragraph) => {
+		setShowEventLogo(true)
+		setHomeImageID(id)
+		setNameForm(name)
+		setColorForm(color)
+		setDescriptionForm(description)
+		setFontForm(font)
+		setParagraphForm(paragraph)
 	}
 
 	useEffect(() => {
 		axios
-			.get(`${API_URL}public/imagehome/${LOGO_ID}`, {
+			.get(`${API_URL}public/variablevalue/${LOGO_ID}`, {
 				headers: {
 					Authorization: `Bearer ${token()}`,
 				},
@@ -46,21 +62,38 @@ const Logo = () => {
 	if (loading) return <Loader />
 
 	return (
-		<div className="flex">
-			{/* <button className=" ml-2 mt-12" onClick={changeData}>
-				<span className="border  border-gray-400  px-1 rounded-full material-icons-outlined text-gray-400 text-sm">
-					edit
-				</span>
-			</button> */}
-			<div className="flex items-center">
-				<img className="logo-image" src={route} alt="logo" />
+		<div className="container-logoEdit">
+			{location.pathname === "/" && userData && (
+				<button
+					onClick={() =>
+						changeData(
+							logo.id,
+							logo.name,
+							logo.color,
+							logo.description,
+							logo.font,
+							logo.paragraph
+						)
+					}
+				>
+					<span className="icons material-icons-outlined">edit</span>
+				</button>
+			)}
+
+			<Link className="container-logo" to="/">
+				<img className="logo" src={route} alt="logo" />
 				<p
-					className="container-phraseLogo  text-overflow"
-					style={{ fontFamily: "Inspiration" }}
+					className="brand"
+					style={{
+						color: logo.color,
+						fontFamily: logo.font,
+						background: logo.bgcolor,
+						fontSize: logo.paragraph,
+					}}
 				>
 					{logo && logo.description}
 				</p>
-			</div>
+			</Link>
 		</div>
 	)
 }

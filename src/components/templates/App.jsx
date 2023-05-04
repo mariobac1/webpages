@@ -1,15 +1,19 @@
 import { Outlet } from "react-router-dom"
-import MainFooter from "../organisms/MainFooter"
-import MainHeader from "../organisms/MainHeader"
+import MainFooter from "../organisms/footer/MainFooter"
+import MainHeader from "../organisms/header/MainHeader"
 
 function App() {
 	return (
 		<div className="App">
-			<MainHeader />
-			<div className="">
+			<header>
+				<MainHeader />
+			</header>
+			<main>
 				<Outlet />
-			</div>
-			<MainFooter />
+			</main>
+			<footer>
+				<MainFooter />
+			</footer>
 		</div>
 	)
 }

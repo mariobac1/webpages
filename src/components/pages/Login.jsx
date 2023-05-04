@@ -2,13 +2,13 @@ import axios from "axios"
 import { useContext, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { API_URL } from "../../constants/env"
-import { UserContext } from "../../contexts/UserContext"
 import { setToken } from "../../helpers/auth"
 import LoginTemplate from "../templates/Login"
+import GlobalContext from "../../contexts/GlobalContext"
 
 const Login = () => {
 	const nav = useNavigate()
-	const { setUserData } = useContext(UserContext)
+	const { setUserData } = useContext(GlobalContext)
 
 	const [error, setError] = useState()
 	const [data, setData] = useState({ email: "", password: "" })
