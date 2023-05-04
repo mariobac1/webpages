@@ -6,6 +6,7 @@ import Form from "../components/pages/products/Form"
 import App from "../components/templates/App"
 import Products from "../components/pages/products/Products"
 import Table from "../components/pages/products/Table"
+import AboutUs from "../components/pages/AboutUs"
 
 const router = createBrowserRouter([
 	{
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
 			{
 				path: "/producto/tabla",
 				element: <Table />,
+			},
+			{
+				path: "/sobrenosotros",
+				element: <AboutUs />,
 			},
 		],
 	},

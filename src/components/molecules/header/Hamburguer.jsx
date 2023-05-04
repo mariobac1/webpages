@@ -56,7 +56,7 @@ const HamburguerMenu = () => {
 							setOpenMenu(!openMenu)
 						}}
 					>
-						<ItemMenu navi={"/contacto"} text={"QUIENES SOMOS"} />
+						<ItemMenu navi={"/sobrenosotros"} text={"QUIENES SOMOS"} />
 					</div>
 				</ul>
 			</div>

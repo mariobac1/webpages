@@ -86,7 +86,7 @@ const MainMenu = () => {
 				)}
 				<li>|</li>
 				<li style={{ fontFamily: "Delicious Handrawn" }}>
-					<Link to="/contact">QUIENES SOMOS</Link>
+					<Link to="/sobrenosotros">QUIENES SOMOS</Link>
 				</li>
 			</ul>
 			{userData && (
