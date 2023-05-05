@@ -6,10 +6,9 @@ $fonts_titles: 'Acme', sans-serif;
   box-sizing: border-box;
 }
 
-body {
+.App {
   display: grid;
   min-height: 100vh;
-  grid-template-rows: 4em 1fr 4em;
 }
 
 div {

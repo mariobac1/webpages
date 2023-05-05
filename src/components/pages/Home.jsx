@@ -36,7 +36,7 @@ const Home = () => {
 			<div className="container-homeBody">
 				<Slogan />
 				<div className="container-images">
-					<ImageVertical />
+					{/* <ImageVertical /> */}
 					<ImageHorizontal />
 				</div>
 				<InfoBox />
