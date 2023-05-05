@@ -37,30 +37,30 @@ const Login = () => {
 
 	return (
 		<LoginTemplate title="Iniciar sesión">
-			<form onSubmit={handleSubmit}>
-				<div className="mb-4">
+			<form onSubmit={handleSubmit} className="loginForm">
+				<div>
+					<label htmlFor="nombre">Ingresa tu email:</label>
 					<input
 						type="email"
-						placeholder="Correo electrónico"
+						placeholder="ejemplo@tucorreo.com"
 						name="email"
 						onChange={changeData}
 						required
 					/>
 				</div>
-				<div className="mb-4">
+				<div>
+					<label htmlFor="nombre">Ingresa tu contraseña:</label>
 					<input
 						type="password"
-						placeholder="Contraseña"
+						placeholder="tu contraseña"
 						name="password"
 						onChange={changeData}
 						required
 					/>
 				</div>
-				<div className="text-center pt-1 mb-12 pb-1">
-					<button className="bg-gradient w-full" type="submit">
-						Ingresar
-					</button>
-				</div>
+				<button className="button bg-gradient w-full" type="submit">
+					Ingresar
+				</button>
 				{error && (
 					<p className="text-center p-2 bg-red-100 text-red-800">
 						{error?.response?.data?.data}

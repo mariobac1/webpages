@@ -22,10 +22,8 @@ const MainMenu = () => {
 
 	useEffect(() => {
 		document.addEventListener("click", handleDocumentClick)
-		console.log("first")
 		return () => {
 			document.removeEventListener("click", handleDocumentClick)
-			console.log("first")
 		}
 	}, [])
 

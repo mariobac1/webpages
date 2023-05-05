@@ -46,7 +46,6 @@ const RenderSocialNetwork = ({ value }) => {
 				setLoading(false)
 			})
 	}, [])
-	console.log(card)
 	if (error) return <h1>{error?.message}</h1>
 	if (loading) return <Loader />
 

@@ -2,7 +2,6 @@ import { useContext } from "react"
 import GlobalContext from "../../contexts/GlobalContext"
 import Slogan from "../organisms/body/Slogan"
 import InfoBox from "../organisms/body/InfoBox"
-import ImageVertical from "../molecules/body/ImageVertical"
 import ImageHorizontal from "../molecules/body/ImageHorizontal"
 import EventModal from "../organisms/changeForms/EventModal"
 import EventButton from "../organisms/changeForms/EventButton"
@@ -36,7 +35,7 @@ const Home = () => {
 			<div className="container-homeBody">
 				<Slogan />
 				<div className="container-images">
-					<ImageVertical />
+					{/* <ImageVertical /> */}
 					<ImageHorizontal />
 				</div>
 				<InfoBox />

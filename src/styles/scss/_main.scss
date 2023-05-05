@@ -1,7 +1,26 @@
 $height-header: 5.5rem;
 
 main {
-  padding-top: $height-header;
+  margin-top: 6rem;
+  grid-row: 2;
+  // @media screen and (min-width: 1025px) and (max-width: 1440px) {
+  //   margin-top: -4rem;
+  // }
+
+  // @media screen and (min-width: 800px) and (max-width: 1024px) {
+  //   margin-top: 1rem;
+  // }
+
+  // @media screen and (min-width: 600px) and (max-width: 799px) {
+  //   margin-top: 1rem;
+  // }
+
+  // @media screen and (min-width: 430px) and (max-width: 599px) {
+  //   margin-top: -79rem;
+  // }
+  // @media only screen and (max-width: 429px) {
+  //   margin-top: 5rem;
+  // }
 }
 
 .container-title {
