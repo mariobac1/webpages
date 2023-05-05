@@ -1,0 +1,9 @@
+$fonts_images: 'Acme', sans-serif;
+
+
+.container-imageHorizontal {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
+	width: 100%;
+}
