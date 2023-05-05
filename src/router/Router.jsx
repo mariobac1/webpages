@@ -27,6 +27,10 @@ const router = createBrowserRouter([
 				element: <Form />,
 			},
 			{
+				path: "/producto/editar/:id",
+				element: <Form />,
+			},
+			{
 				path: "/producto/tabla",
 				element: <Table />,
 			},

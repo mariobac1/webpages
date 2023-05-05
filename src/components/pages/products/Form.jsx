@@ -1,17 +1,20 @@
 import axios from "axios"
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { API_URL } from "../../../constants/env"
 import { token } from "../../../helpers/auth"
 import Loader from "../../atoms/Loader"
 import GlobalContext from "../../../contexts/GlobalContext"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 
 const Form = () => {
 	const nav = useNavigate()
+	const params = useParams()
 	const [error, setError] = useState()
+	const { userData } = useContext(GlobalContext)
+
 	const [loading, setLoading] = useState(false)
 	const [success, setSuccess] = useState(null)
-	const { userData } = useContext(GlobalContext)
+	const [product, setProduct] = useState()
 	const [miJson, setMiJson] = useState({
 		name: "",
 		price: 0.0,
@@ -19,15 +22,27 @@ const Form = () => {
 		file: null,
 	})
 
+	useEffect(() => {
+		if (params?.id) {
+			setLoading(true)
+			axios
+				.get(`${API_URL}public/product/${params.id}`)
+				.then((data) => {
+					setProduct(data.data.data)
+				})
+				.finally(() => {
+					setLoading(false)
+				})
+		}
+	}, [])
+
 	const handleInputChange = (event) => {
 		const { name, value } = event.target
 		setMiJson({ ...miJson, [name]: value })
-		console.log(miJson)
 	}
 
 	const handleFileChange = (event) => {
 		setMiJson({ ...miJson, file: event.target.files[0] })
-		console.log(miJson)
 	}
 
 	const eraseForm = () => {
@@ -42,9 +57,6 @@ const Form = () => {
 			price: parseFloat(miJson.price),
 			description: miJson.description,
 			file: miJson.file,
-			// details: {
-			// 	who_make: userData.email,
-			// },
 		}
 
 		axios
@@ -77,7 +89,7 @@ const Form = () => {
 	return (
 		<section className="inputProduct-page">
 			<h1>¡Ofrece a tus clientes una mejor expreriencia!</h1>
-			<h2 className="">Crear Producto</h2>
+			<h2 className="">{`${params.iD ? "Editar" : "Crear"}`} producto</h2>
 			<form className="container-form" id="productForm" onSubmit={handleSubmit}>
 				<div>
 					<label htmlFor="name">NOMBRE DE PRODUCTO:</label>
@@ -85,6 +97,7 @@ const Form = () => {
 						type="text"
 						name="name"
 						onChange={handleInputChange}
+						defaultValue={product && product.name}
 						required
 					/>
 				</div>
@@ -94,13 +107,19 @@ const Form = () => {
 						type="number"
 						name="price"
 						onChange={handleInputChange}
+						defaultValue={product && product.price}
 						step="0.01"
 						required
 					/>
 				</div>
 				<div>
 					<label htmlFor="name">DESCRIPCCIÓN:</label>
-					<textarea name="description" rows="5" onChange={handleInputChange} />
+					<textarea
+						name="description"
+						rows="5"
+						onChange={handleInputChange}
+						defaultValue={product && product.description}
+					/>
 				</div>
 				<div>
 					<label htmlFor="file">IMAGEN: *.jpg, *.jepg, *.png</label>

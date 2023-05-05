@@ -99,7 +99,7 @@ const Table = () => {
 								<td>{product.price}</td>
 								<td>{product.description}</td>
 								<td>
-									<Link to={`/reservacion/editar/${product.id}`}>Editar</Link>
+									<Link to={`/producto/editar/${product.id}`}>Editar</Link>
 								</td>
 								<td className="erase">
 									<a onClick={() => deleteProduct(product)}>🗑️</a>
