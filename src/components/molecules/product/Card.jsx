@@ -6,7 +6,7 @@ const Card = ({ product }) => {
 
 	return (
 		<article className="article-product">
-			<Link to={`editar/${id}`}>
+			<Link to={`/${id}`}>
 				<div className="container-imageProduct">
 					<img
 						className="group-hover/item:ml-1"
