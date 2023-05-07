@@ -546,19 +546,52 @@ main {
   grid-gap: 1em;
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   width: 100%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
-.container-imageHorizontal h4 {
-  position: relative;
-  text-align: center;
-  margin: -18rem auto 18rem auto;
-  border-top-right-radius: 624rem;
-  border-bottom-right-radius: 624rem;
-  width: 60%;
+@media screen and (min-width: 280px) and (max-width: 500px) {
+  .container-imageHorizontal {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+.container-eachHorizontal {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.infoImage {
+  display: flex;
+  flex-direction: column;
+}
+.infoImage h4 {
+  margin-top: -18rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 624rem;
+  width: 80%;
   padding: 10px;
-  background-color: rgba(107, 114, 128, 0.7);
+  background-color: rgba(107, 114, 128, 0.6);
   color: rgb(255, 255, 255);
+  font-size: 3rem;
   text-align: center;
   font-family: "Acme", sans-serif;
+}
+@media screen and (min-width: 280px) and (max-width: 500px) {
+  .infoImage h4 {
+    margin-top: -12rem;
+    width: 100%;
+    font-size: 2rem;
+  }
+}
+.infoImage button {
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
 
 .container-Box {
@@ -574,7 +607,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 
 .container-Box1 {
