@@ -45,6 +45,12 @@
     text-align: center;
     padding: .5rem 0;
     border-bottom: 2px solid rgba(102, 107, 118, 0.25);
+
+    padding: 1rem 0 1.5rem 0;
+
+    &:hover {
+      background-color: #b9bec5;
+    }
   }
 
   .a_item_menu {
@@ -96,6 +102,15 @@
     border-bottom: 2px solid rgba(102, 107, 118, 0.25);
     text-align: center;
   }
+
+  li {
+    padding: 1rem 0 1.5rem 0;
+
+    &:hover {
+      background-color: #b9bec5;
+    }
+  }
+
 
   .a_item_menu {
     text-align: center;
