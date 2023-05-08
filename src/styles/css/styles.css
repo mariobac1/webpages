@@ -93,12 +93,12 @@ h4 {
 }
 @media screen and (min-width: 800px) and (max-width: 1024px) {
   h4 {
-    font-size: 1.35rem;
+    font-size: 1.5rem;
   }
 }
 @media screen and (max-width: 799px) {
   h4 {
-    font-size: 1.35rem;
+    font-size: 1.45rem;
   }
 }
 
@@ -144,27 +144,17 @@ p {
 }
 @media screen and (min-width: 1025px) and (max-width: 1440px) {
   p {
-    font-size: 1.3rem;
+    font-size: 1.35rem;
   }
 }
 @media screen and (min-width: 800px) and (max-width: 1024px) {
   p {
+    font-size: 1.35rem;
+  }
+}
+@media screen and (max-width: 799px) {
+  p {
     font-size: 1.15rem;
-  }
-}
-@media screen and (min-width: 600px) and (max-width: 799px) {
-  p {
-    font-size: 0.9rem;
-  }
-}
-@media screen and (min-width: 430px) and (max-width: 599px) {
-  p {
-    font-size: 0.9rem;
-  }
-}
-@media only screen and (max-width: 429px) {
-  p {
-    font-size: 0.9rem;
   }
 }
 
