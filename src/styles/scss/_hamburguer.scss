@@ -1,11 +1,22 @@
 .container-hamburguer {
   color: white;
   padding: 0 1rem 0.2rem 1.5rem;
+}
 
-
+.hambur {
+  border-width: 1px;
+  border-radius: 9999px;
   &:hover{
-    border-width: 1px;
+    border: 3em solid #b9bec5;
+    border-width: 2px;
     border-radius: 9999px;
+    padding: .2em .5em .3em .5em;
+  }
+  &:active {
+    border: 2em solid #b9bec5;
+    border-width: 2px;
+    border-radius: 9999px;
+    padding: .2em .5em .3em .5em;
   }
 }
 
@@ -63,7 +74,7 @@
 
 .container-subMenuHamburguer {
   position: absolute;
-  margin-top: 2.9rem;
+  margin-top: 2rem;
   width: 50%;
   right: .125rem;
   background-color: rgb(255, 255, 255);
