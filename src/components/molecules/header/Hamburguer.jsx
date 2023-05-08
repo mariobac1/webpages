@@ -1,33 +1,31 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 import ItemMenu from "../../atoms/ItemMenu"
 
 const HamburguerMenu = () => {
 	const [openMenu, setOpenMenu] = useState(false)
 
-	let menuRef = useRef()
+	const handleDocumentClick = (e) => {
+		const menu = document.querySelector(".container-Menuhamburguer")
+		if (!menu.contains(e.target)) {
+			setOpenMenu(false)
+		}
+	}
 
 	useEffect(() => {
-		let handler = (e) => {
-			if (!menuRef.current.contains(e.target)) {
-				setOpenMenu(false)
-			}
-		}
-		document.addEventListener("mousedown", handler)
-
+		document.addEventListener("click", handleDocumentClick)
 		return () => {
-			document.removeEventListener("mousedown", handler)
+			document.removeEventListener("click", handleDocumentClick)
 		}
 	}, [])
 
+	const renderMenu = () => {
+		setOpenMenu(!openMenu)
+	}
+
 	return (
-		<div ref={menuRef}>
+		<div className="container-Menuhamburguer">
 			<div className="container-hamburguer">
-				<div
-					onClick={() => {
-						setOpenMenu(!openMenu)
-					}}
-					className=" text-white px-1 text-xl hover:border hover:rounded-full"
-				>
+				<div onClick={() => renderMenu()} className="hambur">
 					☰
 				</div>
 			</div>
