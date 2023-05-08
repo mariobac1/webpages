@@ -69,7 +69,9 @@ const RenderIcon = ({ value }) => {
 				.sort((a, b) => a.name.localeCompare(b.name))
 				.map((card) => (
 					<div key={card.id} className="footer-info">
-						<span className="material-symbols-outlined">{card.icon}</span>
+						<span className="iconFooter material-symbols-outlined">
+							{card.icon}
+						</span>
 						<h5
 							className={`${card.color}`}
 							style={{

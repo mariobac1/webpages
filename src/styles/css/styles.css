@@ -370,6 +370,10 @@ header {
   text-align: center;
   padding: 0.5rem 0;
   border-bottom: 2px solid rgba(102, 107, 118, 0.25);
+  padding: 1rem 0 1.5rem 0;
+}
+.container-subMenu div:hover {
+  background-color: #b9bec5;
 }
 .container-subMenu .a_item_menu {
   text-align: center;
@@ -412,6 +416,12 @@ header {
   margin: 0.25rem 0;
   border-bottom: 2px solid rgba(102, 107, 118, 0.25);
   text-align: center;
+}
+.container-subMenuHamburguer li {
+  padding: 1rem 0 1.5rem 0;
+}
+.container-subMenuHamburguer li:hover {
+  background-color: #b9bec5;
 }
 .container-subMenuHamburguer .a_item_menu {
   text-align: center;
@@ -641,6 +651,10 @@ footer {
   text-align: center;
   width: 100%;
   margin-bottom: 1rem;
+}
+
+.iconFooter {
+  font-size: 35px;
 }
 
 .footer-info {
