@@ -97,6 +97,7 @@ const FormImage = () => {
 					type="text"
 					id="description"
 					name="description"
+					maxLength="30"
 					value={miJson.description}
 					onChange={handleInputChange}
 				/>

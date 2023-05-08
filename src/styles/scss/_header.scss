@@ -35,6 +35,8 @@ header {
 
 .container-logo {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container-mainMenu {
@@ -47,8 +49,8 @@ header {
   @media only screen and (max-width: 799px) {
     display: flex;
     grid-column: 3;
-    grid-row: 1 / span 2;
-    align-items: center;
+    grid-row: 2 / span 2;
+    margin-left: auto;
     padding: 0 0.5em;
   }
 
@@ -93,6 +95,10 @@ header {
 }
 
 .brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1rem;
   font-size: 2.3rem;
   font-family: "Bruno Ace", "cursive";
 }
