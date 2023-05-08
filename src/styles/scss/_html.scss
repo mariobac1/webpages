@@ -131,21 +131,21 @@ h5 {
       font-size: 1.25rem;
   }
 
-  @media screen and (min-width: 600px) and (max-width: 799px) {
-      font-size: .85rem;
+  @media screen and (max-width: 799px) {
+      font-size: 1.05rem;
   }
 
-  @media screen and (min-width: 430px) and (max-width: 599px) {
-      font-size: .85rem;
-  }
+  // @media screen and (min-width: 430px) and (max-width: 599px) {
+  //     font-size: .85rem;
+  // }
 
-  @media only screen and (max-width: 429px) {
-      font-size: .75rem;
-  }
+  // @media only screen and (max-width: 429px) {
+  //     font-size: .75rem;
+  // }
 }
 
 h6 {
-  font-size: .75rem;
+  font-size: 1rem;
 }
 
 p {

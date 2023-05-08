@@ -118,24 +118,14 @@ h5 {
     font-size: 1.25rem;
   }
 }
-@media screen and (min-width: 600px) and (max-width: 799px) {
+@media screen and (max-width: 799px) {
   h5 {
-    font-size: 0.85rem;
-  }
-}
-@media screen and (min-width: 430px) and (max-width: 599px) {
-  h5 {
-    font-size: 0.85rem;
-  }
-}
-@media only screen and (max-width: 429px) {
-  h5 {
-    font-size: 0.75rem;
+    font-size: 1.05rem;
   }
 }
 
 h6 {
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 
 p {
