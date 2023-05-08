@@ -285,6 +285,8 @@ header {
 
 .container-logo {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container-mainMenu {
@@ -299,8 +301,8 @@ header {
   .container-mainMenu {
     display: flex;
     grid-column: 3;
-    grid-row: 1/span 2;
-    align-items: center;
+    grid-row: 2/span 2;
+    margin-left: auto;
     padding: 0 0.5em;
   }
 }
@@ -347,6 +349,10 @@ header {
 }
 
 .brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1rem;
   font-size: 2.3rem;
   font-family: "Bruno Ace", "cursive";
 }
@@ -380,7 +386,7 @@ header {
 
 .container-hamburguer {
   color: white;
-  padding: 0 0.25rem;
+  padding: 0 1rem 0.2rem 1.5rem;
 }
 .container-hamburguer:hover {
   border-width: 1px;
@@ -569,7 +575,7 @@ main {
   flex-direction: column;
 }
 .infoImage h4 {
-  margin-top: -18rem;
+  margin-top: -15rem;
   margin-left: auto;
   margin-right: auto;
   border-radius: 624rem;
@@ -577,7 +583,7 @@ main {
   padding: 10px;
   background-color: rgba(107, 114, 128, 0.6);
   color: rgb(255, 255, 255);
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   font-family: "Acme", sans-serif;
 }

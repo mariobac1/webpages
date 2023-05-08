@@ -41,8 +41,8 @@ const MainMenu = () => {
 				{userData ? (
 					<li style={{ fontFamily: "Delicious Handrawn" }}>
 						<div className="selector" onClick={() => renderMenu()}>
-							PRODUCTOS{" "}
-							<span className="material-symbols-outlined">expand_more</span>{" "}
+							PRODUCTOS
+							<span className="material-symbols-outlined">expand_more</span>
 						</div>
 						<div
 							className={` ${
