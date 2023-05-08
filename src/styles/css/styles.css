@@ -32,19 +32,9 @@ h1 {
     font-size: 2.5rem;
   }
 }
-@media screen and (min-width: 600px) and (max-width: 799px) {
+@media screen and (max-width: 799px) {
   h1 {
-    font-size: 1.85rem;
-  }
-}
-@media screen and (min-width: 430px) and (max-width: 599px) {
-  h1 {
-    font-size: 1.35rem;
-  }
-}
-@media only screen and (max-width: 429px) {
-  h1 {
-    font-size: 1.35rem;
+    font-size: 2rem;
   }
 }
 
@@ -62,19 +52,9 @@ h2 {
     font-size: 2.25rem;
   }
 }
-@media screen and (min-width: 600px) and (max-width: 799px) {
+@media screen and (max-width: 799px) {
   h2 {
-    font-size: 1.65rem;
-  }
-}
-@media screen and (min-width: 430px) and (max-width: 599px) {
-  h2 {
-    font-size: 1.25rem;
-  }
-}
-@media only screen and (max-width: 429px) {
-  h2 {
-    font-size: 1.25rem;
+    font-size: 2rem;
   }
 }
 
@@ -94,19 +74,9 @@ h3 {
     font-size: 2rem;
   }
 }
-@media screen and (min-width: 600px) and (max-width: 799px) {
+@media screen and (max-width: 799px) {
   h3 {
     font-size: 1.5rem;
-  }
-}
-@media screen and (min-width: 430px) and (max-width: 599px) {
-  h3 {
-    font-size: 1rem;
-  }
-}
-@media only screen and (max-width: 429px) {
-  h3 {
-    font-size: 1rem;
   }
 }
 
@@ -126,19 +96,9 @@ h4 {
     font-size: 1.35rem;
   }
 }
-@media screen and (min-width: 600px) and (max-width: 799px) {
+@media screen and (max-width: 799px) {
   h4 {
     font-size: 1.35rem;
-  }
-}
-@media screen and (min-width: 430px) and (max-width: 599px) {
-  h4 {
-    font-size: 1rem;
-  }
-}
-@media only screen and (max-width: 429px) {
-  h4 {
-    font-size: 1rem;
   }
 }
 
