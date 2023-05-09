@@ -119,6 +119,10 @@ header {
   border-radius: 7em;
   align-items: center;
   justify-content: center;
+
+  &:hover {
+    color:black
+  }
 }
 
 .container-logo img {

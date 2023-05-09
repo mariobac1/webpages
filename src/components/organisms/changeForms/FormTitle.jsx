@@ -11,7 +11,6 @@ const FormTitle = () => {
 		colorForm,
 		descriptionForm,
 		fontForm,
-		showEventTitle,
 		setShowEventTitle,
 	} = useContext(GlobalContext)
 	const [error, setError] = useState()
@@ -27,7 +26,6 @@ const FormTitle = () => {
 		const { name, value } = event.target
 		setMiJson({ ...miJson, [name]: value })
 	}
-	console.log(showEventTitle)
 	const handleSubmit = (e) => {
 		e.preventDefault()
 		const data = {
