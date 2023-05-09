@@ -61,18 +61,20 @@ const AboutUs = () => {
 					{card.title}
 				</h1>
 				<div className="body-aboutUs">
-					<h2
-						className={`${card.color}`}
-						style={{ color: card.color, fontFamily: card.font }}
-					>
-						{card.paragraph}
-					</h2>
-					<p
-						className={`${card.color}`}
-						style={{ color: card.color, fontFamily: card.font }}
-					>
-						{card.description}
-					</p>
+					<div>
+						<h2
+							className={`${card.color}`}
+							style={{ color: card.color, fontFamily: card.font }}
+						>
+							{card.paragraph}
+						</h2>
+						<p
+							className={`${card.color}`}
+							style={{ color: card.color, fontFamily: card.font }}
+						>
+							{card.description}
+						</p>
+					</div>
 					<img
 						src={`${API_URL}${IMAGE_HOME_URL}${
 							card.id

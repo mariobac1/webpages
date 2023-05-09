@@ -8,6 +8,7 @@ import { deleteToken } from "../../../helpers/auth"
 const MainMenu = () => {
 	const { userData, setUserData } = useContext(GlobalContext)
 	const [openMenu, setOpenMenu] = useState(false)
+
 	const logout = () => {
 		deleteToken()
 		setUserData()

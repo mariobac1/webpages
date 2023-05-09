@@ -4,12 +4,16 @@ $fonts_images: 'Acme', sans-serif;
 .container-imageHorizontal {
   display: grid;
   grid-gap: 1em;
-  grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
+  grid-template-columns: repeat(auto-fill,minmax(700px,1fr));
 	width: 100%;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
 
+
+  @media screen and (min-width: 501px) and (max-width: 1524px) {
+    grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
+  }
   @media screen and (min-width: 280px) and (max-width: 500px) {
     grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
   }
