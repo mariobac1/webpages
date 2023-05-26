@@ -44,7 +44,6 @@ const FormBox = () => {
 			font: miJson.font,
 			title: miJson.title,
 		}
-		console.log(data)
 		axios
 			.put(`${API_URL}private/variablevalue/${homeImageID}`, data, {
 				headers: {
