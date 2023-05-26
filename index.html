@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" id= "favicon" href="" />
     <script type="module">
-      import { API_URL, LOGO_ID } from "./env.js";
+      import { API_URL, LOGO_ID } from "./src/constants/env.js";
       const faviconElement = document.getElementById("favicon");
       const faviconUrl = `${API_URL}public/variablevalue/${LOGO_ID}`;
       faviconElement.setAttribute("href", faviconUrl);
@@ -25,7 +25,7 @@
 
   <title id="page-title"></title>
     <script type="module">
-      import { NAME_PAGE } from "./env.js";
+      import { NAME_PAGE } from "./src/constants/env.js";
       document.getElementById("page-title").textContent = NAME_PAGE;
     </script>
   </head>
