@@ -182,7 +182,7 @@ button {
 }
 
 .background-text {
-  background: linear-gradient(to right, #012959, #0249a1, #1e76a5, #0249a1, #012959);
+  background: linear-gradient(to right, #000000, #303338, #a51e1e, #e15f5f, #a51e1e, #303338, #000000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

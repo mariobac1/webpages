@@ -1,16 +1,14 @@
 import axios from "axios"
-import { useContext, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { API_URL } from "../../../constants/env"
 import { token } from "../../../helpers/auth"
 import Loader from "../../atoms/Loader"
-import GlobalContext from "../../../contexts/GlobalContext"
 import { useNavigate, useParams } from "react-router-dom"
 
 const Form = () => {
 	const nav = useNavigate()
 	const params = useParams()
 	const [error, setError] = useState()
-	const { userData } = useContext(GlobalContext)
 
 	const [loading, setLoading] = useState(false)
 	const [success, setSuccess] = useState(null)
@@ -36,11 +34,6 @@ const Form = () => {
 		}
 	}, [])
 
-	const handleInputChange = (event) => {
-		const { name, value } = event.target
-		setMiJson({ ...miJson, [name]: value })
-	}
-
 	const handleFileChange = (event) => {
 		setMiJson({ ...miJson, file: event.target.files[0] })
 	}
@@ -53,50 +46,75 @@ const Form = () => {
 		e.preventDefault()
 
 		const data = {
-			name: miJson.name,
-			price: parseFloat(miJson.price),
-			description: miJson.description,
+			name: e.target.name.value,
+			price: parseFloat(e.target.price.value),
+			description: e.target.description.value,
 			file: miJson.file,
 		}
-
-		axios
-			.post(`${API_URL}private/product`, data, {
-				headers: {
-					Authorization: `Bearer ${token()}`,
-					"Content-Type": "multipart/form-data",
-				},
-			})
-			.then(() => {
-				setLoading(true)
-				setSuccess("Guardado Exitosamente")
-				setTimeout(() => {
-					eraseForm()
-					setSuccess(null)
-				}, 1200)
-			})
-			.catch((err) => {
-				setError(err)
-			})
-			.finally(() => {
-				setLoading(false)
-			})
+		console.log(data)
+		if (!params.id) {
+			axios
+				.post(`${API_URL}private/product`, data, {
+					headers: {
+						Authorization: `Bearer ${token()}`,
+						"Content-Type": "multipart/form-data",
+					},
+				})
+				.then(() => {
+					setLoading(true)
+					setSuccess("Guardado Exitosamente")
+					setTimeout(() => {
+						// eraseForm()
+						setSuccess(null)
+					}, 1200)
+					nav("/producto/tabla")
+				})
+				.catch((err) => {
+					setError(err)
+				})
+				.finally(() => {
+					setLoading(false)
+				})
+		} else {
+			axios
+				.put(`${API_URL}private/product/${params.id}`, data, {
+					headers: {
+						Authorization: `Bearer ${token()}`,
+						"Content-Type": "multipart/form-data",
+					},
+				})
+				.then(() => {
+					setLoading(true)
+					setSuccess("Guardado Exitosamente")
+					setTimeout(() => {
+						eraseForm()
+						setSuccess(null)
+					}, 1200)
+					nav("/producto/tabla")
+				})
+				.catch((err) => {
+					setError(err)
+				})
+				.finally(() => {
+					setLoading(false)
+				})
+		}
 	}
+	console.log(params.id)
 
-	if (!userData) nav("/")
 	if (loading) return <Loader />
 	if (error) return <h1>{error?.message}</h1>
 
 	return (
 		<section className="inputProduct-page">
 			<h1>¡Ofrece a tus clientes una mejor expreriencia!</h1>
-			<h2 className="">{`${params.iD ? "Editar" : "Crear"}`} producto</h2>
+			<h2 className="">{`${params.id ? "Editar" : "Crear"}`} producto</h2>
 			<form className="container-form" id="productForm" onSubmit={handleSubmit}>
 				<div>
 					<label htmlFor="name">NOMBRE DE PRODUCTO:</label>
 					<input
 						type="text"
 						name="name"
-						onChange={handleInputChange}
 						defaultValue={product && product.name}
 						required
 					/>
@@ -106,7 +124,6 @@ const Form = () => {
 					<input
 						type="number"
 						name="price"
-						onChange={handleInputChange}
 						defaultValue={product && product.price}
 						step="0.01"
 						required
@@ -117,7 +134,6 @@ const Form = () => {
 					<textarea
 						name="description"
 						rows="5"
-						onChange={handleInputChange}
 						defaultValue={product && product.description}
 					/>
 				</div>
@@ -131,7 +147,10 @@ const Form = () => {
 					/>
 				</div>
 				{success && <p className="confirmation">{success}</p>}
-				<input type="submit" value="Crear Producto" />
+				<input
+					type="submit"
+					value={`${params.id ? "Editar" : "Crear"} Producto`}
+				/>
 			</form>
 		</section>
 	)
