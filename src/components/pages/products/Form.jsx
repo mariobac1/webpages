@@ -16,6 +16,7 @@ const Form = () => {
 	const [miJson, setMiJson] = useState({
 		name: "",
 		price: 0.0,
+		promotion: false,
 		description: "",
 		file: null,
 	})
@@ -38,6 +39,10 @@ const Form = () => {
 		setMiJson({ ...miJson, file: event.target.files[0] })
 	}
 
+	const handleCheckBox = (event) => {
+		setMiJson({ ...miJson, promotion: event.target.checked })
+	}
+
 	const eraseForm = () => {
 		document.getElementById("productForm").reset()
 	}
@@ -49,9 +54,9 @@ const Form = () => {
 			name: e.target.name.value,
 			price: parseFloat(e.target.price.value),
 			description: e.target.description.value,
+			promotion: miJson.promotion,
 			file: miJson.file,
 		}
-		console.log(data)
 		if (!params.id) {
 			axios
 				.post(`${API_URL}private/product`, data, {
@@ -100,7 +105,6 @@ const Form = () => {
 				})
 		}
 	}
-	console.log(params.id)
 
 	if (loading) return <Loader />
 	if (error) return <h1>{error?.message}</h1>
@@ -115,6 +119,7 @@ const Form = () => {
 					<input
 						type="text"
 						name="name"
+						maxLength="50"
 						defaultValue={product && product.name}
 						required
 					/>
@@ -127,6 +132,15 @@ const Form = () => {
 						defaultValue={product && product.price}
 						step="0.01"
 						required
+					/>
+				</div>
+				<div>
+					<label htmlFor="name">PROMOCIÓN:</label>
+					<input
+						type="checkbox"
+						name="promotion"
+						defaultValue={product && product.promotion}
+						onChange={handleCheckBox}
 					/>
 				</div>
 				<div>
