@@ -7,6 +7,7 @@ import App from "../components/templates/App"
 import Products from "../components/pages/products/Products"
 import Table from "../components/pages/products/Table"
 import AboutUs from "../components/pages/AboutUs"
+import Promotions from "../components/pages/products/Promotions"
 
 const router = createBrowserRouter([
 	{
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
 			{
 				path: "/producto",
 				element: <Products />,
+			},
+			{
+				path: "/promociones",
+				element: <Promotions />,
 			},
 			{
 				path: "/producto/crear",
