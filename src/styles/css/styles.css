@@ -351,7 +351,6 @@ header {
 
 .container-subMenu, .container-subMenuH {
   position: absolute;
-  left: 44%;
   margin-top: 1.5rem;
   width: 20rem;
   right: 0.125rem;

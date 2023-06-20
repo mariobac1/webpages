@@ -7,7 +7,7 @@ const Slogan = () => {
 			<h1>
 				<RenderTitle value="title1" />
 			</h1>
-			<RenderButton value="Boton1" />
+			<RenderButton value="Boton1" route="/promociones" />
 		</div>
 	)
 }

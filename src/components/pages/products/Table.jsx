@@ -82,6 +82,7 @@ const Table = () => {
 						<tr>
 							<th>Nombre</th>
 							<th>Precio</th>
+							<th>Promoción</th>
 							<th>Descripción</th>
 							<th>Editar</th>
 							<th>Borrar</th>
@@ -97,6 +98,7 @@ const Table = () => {
 							<tr key={product.id}>
 								<td>{product.name}</td>
 								<td>{product.price}</td>
+								{product.promotion ? <td>Si</td> : <td>No</td>}
 								<td>{product.description}</td>
 								<td>
 									<Link to={`/producto/editar/${product.id}`}>Editar</Link>

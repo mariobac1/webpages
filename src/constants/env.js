@@ -13,3 +13,7 @@ export const IMAGE_SECOND_ID = import.meta.env.VITE_IMAGE_SECOND_ID
 export const IMAGE_THIRD_ID = import.meta.env.VITE_IMAGE_THIRD_ID
 export const IMAGE_FOURTH_ID = import.meta.env.VITE_IMAGE_FOURTH_ID
 export const ABOUT_US_ID = import.meta.env.VITE_ABOUT_US_ID
+
+//other values
+export const NAME_PAGE = import.meta.env.VITE_NAME_PAGE
+export const GRADIENT = import.meta.env.VITE_GRADIENTE

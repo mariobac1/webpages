@@ -6,7 +6,7 @@ import Card from "../../molecules/product/Card"
 import axios from "axios"
 import { API_URL } from "../../../constants/env"
 
-const Products = () => {
+const Promotions = () => {
 	const [data2, setData2] = useState()
 	const [error2, setError2] = useState()
 	const [loading2, setLoading2] = useState(true)
@@ -36,6 +36,12 @@ const Products = () => {
 			?.description.substring(0, 25)
 		return whatsapp || ""
 	}
+	const Boton = () => {
+		const Botonfirst = data2
+			.find((card) => card.name.includes("Boton1"))
+			?.description.substring(0, 25)
+		return Botonfirst || ""
+	}
 
 	if (loading) return <Loader />
 	if (error) return <h1>{error?.message}</h1>
@@ -44,16 +50,16 @@ const Products = () => {
 
 	return (
 		<section>
-			<h1 className="container-titleDisplayProducts">
-				Explora nuestros Productos
-			</h1>
+			<h1 className="container-titleDisplayProducts">{Boton()}</h1>
 			<div className="containers-product">
-				{data.map((product) => (
-					<Card key={product.id} product={product} whatsapp={whats()} />
-				))}
+				{data
+					.filter((product) => product.promotion)
+					.map((product) => (
+						<Card key={product.id} product={product} whatsapp={whats()} />
+					))}
 			</div>
 		</section>
 	)
 }
 
-export default Products
+export default Promotions
