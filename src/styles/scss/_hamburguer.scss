@@ -22,7 +22,7 @@
 
 .container-subMenu, .container-subMenuH {
   position: absolute;
-  // left: 44%;
+  left: 42%;
   margin-top: 1.5rem;
   width: 20rem;
   right: .125rem;
@@ -36,6 +36,7 @@
     justify-content: flex-end;
     align-items: center;
     color: rgb(243 244 246);
+    color: red;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     border-radius: 0.5rem;
   }
