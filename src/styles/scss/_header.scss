@@ -27,7 +27,8 @@ header {
   align-items: center;
   padding: 0 0.5em;
 
-  @media only screen and (max-width: 799px) {
+  // @media only screen and (max-width: 799px) {
+  @media only screen and (max-width: 1000px) {
     grid-column: 1 / span 2;
     grid-row: 1 / span 2;
   }
@@ -46,7 +47,8 @@ header {
   grid-column: 2;
   grid-row: 2;
   margin-top: -2em;
-  @media only screen and (max-width: 799px) {
+  // @media only screen and (max-width: 799px) {
+  @media only screen and (max-width: 1000px) {
     display: flex;
     grid-column: 3;
     grid-row: 2 / span 2;
@@ -58,7 +60,8 @@ header {
 
 .mainMenu {
   display: flex;
-  @media only screen and (max-width: 799px) {
+  // @media only screen and (max-width: 799px) {
+  @media only screen and (max-width: 1000px) {
       display: none;
   }
 }
@@ -72,7 +75,8 @@ header {
 .hamburguerMenu {
 	display: none;
 
-  @media screen and (max-width: 799px) {
+  // @media screen and (max-width: 799px) {
+  @media screen and (max-width: 1000px) {
     display: block;
   }
 }
@@ -84,7 +88,8 @@ header {
   margin: 1em 0.5vw 0 0;
   padding: 0 0.5em;
 
-  @media screen and (max-width: 799px) {
+  // @media screen and (max-width: 799px) {
+  @media screen and (max-width: 1000px) {
     display: none;
   }
 }

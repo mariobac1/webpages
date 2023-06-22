@@ -216,7 +216,7 @@ header {
   align-items: center;
   padding: 0 0.5em;
 }
-@media only screen and (max-width: 799px) {
+@media only screen and (max-width: 1000px) {
   .container-logoEdit {
     grid-column: 1/span 2;
     grid-row: 1/span 2;
@@ -237,7 +237,7 @@ header {
   grid-row: 2;
   margin-top: -2em;
 }
-@media only screen and (max-width: 799px) {
+@media only screen and (max-width: 1000px) {
   .container-mainMenu {
     display: flex;
     grid-column: 3;
@@ -250,7 +250,7 @@ header {
 .mainMenu {
   display: flex;
 }
-@media only screen and (max-width: 799px) {
+@media only screen and (max-width: 1000px) {
   .mainMenu {
     display: none;
   }
@@ -264,7 +264,7 @@ header {
 .hamburguerMenu {
   display: none;
 }
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 1000px) {
   .hamburguerMenu {
     display: block;
   }
@@ -277,7 +277,7 @@ header {
   margin: 1em 0.5vw 0 0;
   padding: 0 0.5em;
 }
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 1000px) {
   .container-socialNetwork_color {
     display: none;
   }
@@ -351,6 +351,7 @@ header {
 
 .container-subMenu, .container-subMenuH {
   position: absolute;
+  left: 42%;
   margin-top: 1.5rem;
   width: 20rem;
   right: 0.125rem;
@@ -364,6 +365,7 @@ header {
   justify-content: flex-end;
   align-items: center;
   color: rgb(243, 244, 246);
+  color: red;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   border-radius: 0.5rem;
 }
