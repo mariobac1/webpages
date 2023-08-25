@@ -485,6 +485,24 @@ header {
   }
 }
 
+.container-ButtonSelection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-selection1 {
+  align-items: center;
+  background-color: #1e76a5;
+  background-size: cover;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  font-size: 1.3rem;
+  padding: 0.5em 1em;
+  border-radius: 624rem;
+  margin: 0 3rem 0.15rem 0.15rem;
+}
+
 main {
   margin-top: 6rem;
   grid-row: 2;
@@ -908,18 +926,6 @@ input[type=file]::file-selector-button:active {
   line-height: 1.5rem;
   margin: 0 auto 0 auto;
   text-align: center;
-}
-
-.article-product {
-  transition: all 0.3s ease-in-out; /* Define una transición suave para todas las propiedades CSS */
-}
-
-.article-product:hover {
-  transform: scale(1.01); /* Aumenta el tamaño de la etiqueta article en un 10% */
-}
-
-.article-product:hover img {
-  transform: scale(1.02); /* Aumenta el tamaño de la imagen en un 20% */
 }
 
 .article-product:hover h2 {
