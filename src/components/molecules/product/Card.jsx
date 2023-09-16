@@ -1,18 +1,21 @@
-import { useState } from "react"
 import { API_URL, IMAGE_PRODUCT_URL } from "../../../constants/env"
 import { Link } from "react-router-dom"
 
-const Card = ({ product, whatsapp }) => {
+const Card = ({ product }) => {
 	const { name, id, price, description } = product
-	const [showPopup, setShowPopup] = useState(false)
+	// const [showPopup, setShowPopup] = useState(false)
 
-	const handleProductClick = () => {
-		setShowPopup(true)
-	}
+	// const handleProductClick = () => {
+	// 	setShowPopup(true)
+	// }
 
 	return (
 		<article className="article-product">
-			<div className="my-product" onClick={handleProductClick}>
+			<Link
+				to={`/producto/page/${product.id}`}
+				className="my-product"
+				// onClick={handleProductClick}
+			>
 				<div className="container-imageProduct">
 					<img
 						className="group-hover/item:ml-1"
@@ -25,8 +28,8 @@ const Card = ({ product, whatsapp }) => {
 					<h3 className="group-hover/item:text-2xl">Precio: Q.{price}</h3>
 					<p className="group-hover/item:font-bold">{description}</p>
 				</div>
-			</div>
-			{showPopup && (
+			</Link>
+			{/* {showPopup && (
 				<div className="container-window">
 					<div className="container-windowForm">
 						<div className="container-windowTop">
@@ -56,7 +59,7 @@ const Card = ({ product, whatsapp }) => {
 						</div>
 					</div>
 				</div>
-			)}
+			)} */}
 		</article>
 	)
 }
