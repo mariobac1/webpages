@@ -23,3 +23,26 @@
         font-size: .95rem;
     }
 }
+
+.container-ButtonSelection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.button-selection1 {
+  align-items: center;
+  background-color: #1e76a5;
+  background-size: cover;
+  align-items: center;
+  color: rgb(255 255 255);
+  font-size: 1.3rem;
+  padding: 0.5em 1em;
+  border-radius: 624rem;
+  margin: 0 3rem 0.15rem .15rem;
+  // border-top-width: 0;
+  // border-right-width: 3rem;
+  // border-bottom-width: 0.15rem;
+  // border-left-width: 3rem;
+}

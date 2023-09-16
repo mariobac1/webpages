@@ -8,6 +8,7 @@ import Products from "../components/pages/products/Products"
 import Table from "../components/pages/products/Table"
 import AboutUs from "../components/pages/AboutUs"
 import Promotions from "../components/pages/products/Promotions"
+import Page from "../components/molecules/product/Page"
 
 const router = createBrowserRouter([
 	{
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
 			{
 				path: "/producto/editar/:id",
 				element: <Form />,
+			},
+			{
+				path: "/producto/page/:id",
+				element: <Page />,
 			},
 			{
 				path: "/producto/tabla",

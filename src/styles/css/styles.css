@@ -485,6 +485,24 @@ header {
   }
 }
 
+.container-ButtonSelection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-selection1 {
+  align-items: center;
+  background-color: #1e76a5;
+  background-size: cover;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  font-size: 1.3rem;
+  padding: 0.5em 1em;
+  border-radius: 624rem;
+  margin: 0 3rem 0.15rem 0.15rem;
+}
+
 main {
   margin-top: 6rem;
   grid-row: 2;
@@ -910,18 +928,6 @@ input[type=file]::file-selector-button:active {
   text-align: center;
 }
 
-.article-product {
-  transition: all 0.3s ease-in-out; /* Define una transición suave para todas las propiedades CSS */
-}
-
-.article-product:hover {
-  transform: scale(1.01); /* Aumenta el tamaño de la etiqueta article en un 10% */
-}
-
-.article-product:hover img {
-  transform: scale(1.02); /* Aumenta el tamaño de la imagen en un 20% */
-}
-
 .article-product:hover h2 {
   font-size: 2.2rem; /* Aumenta el tamaño de la fuente del título en 0.2rem */
 }
@@ -995,6 +1001,147 @@ input[type=file]::file-selector-button:active {
 }
 .container-table tr:nth-child(even) {
   background-color: rgb(243, 244, 246);
+}
+
+.title-page {
+  justify-content: center;
+  align-items: center;
+  color: #832137;
+  margin-bottom: 1.5rem;
+}
+
+.imagen-product {
+  display: flex;
+  margin: 1.25rem auto;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  width: 80%;
+}
+.imagen-product img {
+  vertical-align: middle;
+  height: 15rem;
+  width: 20%;
+  object-fit: cover;
+}
+.imagen-product p {
+  margin-left: 2rem;
+  font-size: 1.25em;
+  color: #4d3f3c;
+}
+
+.includes {
+  display: flex;
+  justify-content: center;
+  color: #832137;
+}
+.includes ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.includes li {
+  display: flex;
+  color: #832137;
+}
+.includes p {
+  color: #832137;
+}
+
+.title2 {
+  display: flex;
+  font-size: 1.5rem;
+  color: black;
+  justify-content: center;
+}
+
+.contact-Whatsapp {
+  display: flex;
+  align-items: center;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+.contact-Whatsapp img {
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+/* CSS para ContactForm */
+.contact-form-container {
+  font-family: Arial, sans-serif;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form-container p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 10px;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input[type=text],
+.contact-form input[type=email],
+.contact-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Media Query para responsividad */
+@media (max-width: 600px) {
+  .contact-form-container {
+    max-width: 100%;
+  }
+}
+/* Personalización del campo de fecha */
+.contact-form input[type=date] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  appearance: none; /* Remove default arrow icon on some browsers */
+  background-image: url("path/to/calendar-icon.png"); /* Replace with your calendar icon */
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 20px;
+  padding-right: 30px; /* Space for the icon */
+}
+
+/* Cambiar el color del campo cuando está enfocado */
+.contact-form input[type=date]:focus {
+  border-color: #007bff;
 }
 
 .container-aboutUs {

@@ -71,17 +71,17 @@
   }
 }
 
-.article-product {
-  transition: all 0.3s ease-in-out; /* Define una transición suave para todas las propiedades CSS */
-  }
+// .article-product {
+//   transition: all 0.3s ease-in-out; /* Define una transición suave para todas las propiedades CSS */
+//   }
 
-.article-product:hover {
-transform: scale(1.01); /* Aumenta el tamaño de la etiqueta article en un 10% */
-}
+// .article-product:hover {
+// transform: scale(1.01); /* Aumenta el tamaño de la etiqueta article en un 10% */
+// }
 
-.article-product:hover img {
-transform: scale(1.02); /* Aumenta el tamaño de la imagen en un 20% */
-}
+// .article-product:hover img {
+// transform: scale(1.02); /* Aumenta el tamaño de la imagen en un 20% */
+// }
 
 .article-product:hover h2 {
 font-size: 2.2rem; /* Aumenta el tamaño de la fuente del título en 0.2rem */
