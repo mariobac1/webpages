@@ -84,17 +84,16 @@ const Form = () => {
 		let newIndex = 1
 
 		for (const key in updatedDetails.items) {
-			newItems[`producto${newIndex}`] = updatedDetails.items[key]
-			newIndex++
+			if (updatedDetails.items[key].name.trim() !== "") {
+				newItems[`producto${newIndex}`] = updatedDetails.items[key]
+				newIndex++
+			}
 		}
 
-		setMiJson((prevMiJson) => ({
-			...prevMiJson,
-			details: {
-				...prevMiJson.details,
-				items: newItems,
-			},
-		}))
+		const updatedMiJson = { ...miJson }
+		updatedMiJson.details.items = newItems
+
+		setMiJson(updatedMiJson)
 	}
 
 	useEffect(() => {
@@ -122,9 +121,6 @@ const Form = () => {
 				})
 		}
 	}, [])
-	useEffect(() => {
-		console.log(miJson)
-	})
 
 	const handleFileChange = (event) => {
 		setMiJson({ ...miJson, file: event.target.files[0] })
